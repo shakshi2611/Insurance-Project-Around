@@ -1,22 +1,31 @@
-import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
+import { BarChart2, ShoppingBag, Users, Zap, Search, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, TextField, Button } from "@mui/material";
 
 const OverviewPage = () => {
-  const [activeTable, setActiveTable] = useState(null); // Tracks which table to show
+  const [activeTable, setActiveTable] = useState(null); 
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Dummy data for demonstration
   const allData = [
     { name: "Insurance A", policyNumber: "123456", amount: 1000, percentage: 10 },
     { name: "Insurance B", policyNumber: "654321", amount: 2000, percentage: 20 },
-  ];
+  ]; 
 
   const matchData = [{ name: "Insurance A", policyNumber: "123456", amount: 1000, percentage: 10 }];
   const positiveData = [{ name: "Insurance B", policyNumber: "654321", amount: 2000, percentage: 20 }];
   const negativeData = [];
+
+  const handleSearch = () => {
+    console.log("Searching for:", searchTerm);
+  };
+
+  const handleExport = () => {
+    console.log("Exporting data...");
+  };
 
   
   const renderTable = (data, title) => (
@@ -65,7 +74,35 @@ const OverviewPage = () => {
       <Header title='Overview' />
 
       <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
-    
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <TextField
+              variant="outlined"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#9ca3af",
+                  },
+                 
+                  "&.Mui-focused fieldset": { 
+                    borderColor: "#9ca3af",
+                  },
+                },
+                marginRight: "10px",
+              }}
+              style={{ marginRight: "10px" }}
+            />
+            <Button variant="contained"  color="primary" onClick={handleSearch} startIcon={<Search />}>
+              Search
+            </Button>
+          </div>
+          <Button variant="contained" color="secondary" onClick={handleExport} startIcon={<Download />}>
+            Export
+          </Button>
+        </div>
         <motion.div
           className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8'
           initial={{ opacity: 0, y: 20 }}
