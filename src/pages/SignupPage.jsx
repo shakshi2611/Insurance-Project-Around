@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import  { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
 
@@ -74,6 +75,12 @@ const SignupPage = ({ setIsAuthenticated }) => {
 								Sign Up
 							</Button>
 						</Box>
+                        <Typography variant="body2" color="text.secondary">
+							Having an account?{" "}
+							<Link to="/login" style={{ color: '#6366F1', textDecoration: 'none' }}>
+								Login here
+							</Link>
+						</Typography>
 					</Box>
 				</Container>
 			</main>
