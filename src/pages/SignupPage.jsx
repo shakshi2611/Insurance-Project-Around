@@ -2,23 +2,32 @@ import  { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
+import { toast } from "react-toastify";
 
-const SignupPage = ({ setIsAuthenticated }) => {
+const SignupPage = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const handleSignup = (e) => {
 		e.preventDefault();
-		// Add signup logic here
-		// If successful:
-		setIsAuthenticated(true);
+	    let regobj={name,email,password};
+		console.log(regobj);
+	
+		fetch("http://localhost:5000/users",{
+			method:"POST",
+			headers:{'content-type':'application/json'},
+			body:JSON.stringify(regobj)
+		}).then((res)=>{
+			toast.success('Registered Sucessfully')
+		}).catch((err)=>{
+			toast.error('Failed:'+err.message)
+		})
 	};
 
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
 			<Header title='Signup' />
-
 			<main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
 				<Container component="main" maxWidth="xs">
 					<Box
@@ -44,7 +53,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
 								label="Full Name"
 								autoFocus
 								value={name}
-								onChange={(e) => setName(e.target.value)}
+								onChange={e => setName(e.target.value)}
 							/>
 							<TextField
 								margin="normal"
@@ -54,7 +63,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
 								type="email"
 								autoComplete="email"
 								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								onChange={e => setEmail(e.target.value)}
 							/>
 							<TextField
 								margin="normal"
@@ -64,7 +73,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
 								type="password"
 								autoComplete="current-password"
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}
+								onChange={e => setPassword(e.target.value)}
 							/>
 							<Button
 								type="submit"

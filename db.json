@@ -1,4 +1,10 @@
 {
-    "users": []
-  }
-  
+  "users": [
+    {
+      "id": "45cb",
+      "name": "priya",
+      "email": "priya215@gmail.com",
+      "password": "priya"
+    }
+  ]
+}

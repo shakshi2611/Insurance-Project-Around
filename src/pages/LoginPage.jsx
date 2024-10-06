@@ -1,17 +1,52 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import { object } from "framer-motion/client";
 
-const LoginPage = ({ setIsAuthenticated }) => {
+
+const LoginPage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const navigate=useNavigate()
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		// Add authentication logic here
-		// If successful:
-		setIsAuthenticated(true);
+		if (validate()){
+			// console.log('proceed');
+			fetch("http://localhost:5000/users"+email).then((res)=>{
+				return res.json();
+			}).then((resp)=>{
+				// console.log(resp)
+				if(object.keys(resp).length === 0){
+					toast.error('Please Enter valid email');
+				}else{
+					if(resp.password === password){
+						toast.success('success');
+						navigate('/')
+				}else{
+					toast.error('Please Enter valid credentials');
+				}
+			}
+			}).catch((err)=>{
+				toast.error('Login failed due to:'+err.message);
+			});
+		}
 	};
+
+	const validate=()=>{
+		let result=true;
+		if (email ==='' || email ===null){
+			result=false;
+			toast.warning('Please Enter Email')
+		}
+		if (password ==='' || password ===null){
+			result=false;
+			toast.warning('Please Enter password')
+		}
+		return result;
+	}
 
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
@@ -44,7 +79,7 @@ const LoginPage = ({ setIsAuthenticated }) => {
 								autoComplete="email"
 								autoFocus
 								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								onChange={e => setEmail(e.target.value)}
 							/>
 							<TextField
 								margin="normal"
@@ -54,7 +89,7 @@ const LoginPage = ({ setIsAuthenticated }) => {
 								type="password"
 								autoComplete="current-password"
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}
+								onChange={e => setPassword(e.target.value)}
 							/>
 							<Button
 								type="submit"
@@ -65,6 +100,12 @@ const LoginPage = ({ setIsAuthenticated }) => {
 								Login
 							</Button>
 						</Box>
+						<Typography variant="body2" color="text.secondary">
+							New User?{" "}
+							<Link to="/signup" style={{ color: '#6366F1', textDecoration: 'none' }}>
+								Signup here
+							</Link>
+						</Typography>
 					</Box>
 				</Container>
 			</main>
