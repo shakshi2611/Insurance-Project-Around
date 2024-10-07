@@ -1,57 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import { object } from "framer-motion/client";
-
 
 const LoginPage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const navigate=useNavigate()
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+
+		if (isLoggedIn) {
+			navigate('/overview');
+		}
+	}, [isLoggedIn, navigate]);
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		if (validate()){
-			// console.log('proceed');
-			fetch("http://localhost:5000/users"+email).then((res)=>{
-				return res.json();
-			}).then((resp)=>{
-				// console.log(resp)
-				if(object.keys(resp).length === 0){
-					toast.error('Please Enter valid email');
-				}else{
-					if(resp.password === password){
-						toast.success('success');
-						navigate('/')
-				}else{
-					toast.error('Please Enter valid credentials');
-				}
-			}
-			}).catch((err)=>{
-				toast.error('Login failed due to:'+err.message);
-			});
+		if (validate()) {
+			fetchUser(email)
+				.then((resp) => {
+					if (Object.keys(resp).length === 0) {
+						toast.error('Please Enter valid email');
+					} else {
+						if (resp.password === password) {
+							toast.success('Login successful');
+							setIsLoggedIn(true);
+						} else {
+							toast.error('Please Enter valid credentials');
+						}
+					}
+				})
+				.catch((err) => {
+					toast.error('Login failed due to: ' + err.message);
+				});
 		}
 	};
 
-	const validate=()=>{
-		let result=true;
-		if (email ==='' || email ===null){
-			result=false;
-			toast.warning('Please Enter Email')
+	const fetchUser = (email) => {
+		return fetch(`http://localhost:5000/users?email=${email}`)
+			.then((res) => res.json());
+	};
+
+	const validate = () => {
+		let result = true;
+		if (email === '' || email === null) {
+			result = false;
+			toast.warning('Please Enter Email');
 		}
-		if (password ==='' || password ===null){
-			result=false;
-			toast.warning('Please Enter password')
+		if (password === '' || password === null) {
+			result = false;
+			toast.warning('Please Enter password');
 		}
 		return result;
-	}
+	};
 
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
 			<Header title='Login' />
-
 			<main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
 				<Container component="main" maxWidth="xs">
 					<Box
@@ -114,4 +122,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-

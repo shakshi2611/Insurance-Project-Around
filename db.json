@@ -5,6 +5,18 @@
       "name": "priya",
       "email": "priya215@gmail.com",
       "password": "priya"
+    },
+    {
+      "id": "ba7d",
+      "name": "radha",
+      "email": "radha2000@gmail.com",
+      "password": "radha20000"
+    },
+    {
+      "id": "4ccd",
+      "name": "Priyanka",
+      "email": "priyanka@gmail.com",
+      "password": "priyanka"
     }
   ]
 }
