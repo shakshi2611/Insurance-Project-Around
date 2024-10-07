@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from "./components/common/Sidebar";
 import OverviewPage from "./pages/OverviewPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -13,9 +15,7 @@ import SettingsPage from "./pages/SettingsPage";
 
 
 function App() {
-  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
   const handleLogin = () => {
     setIsAuthenticated(true);
   };
@@ -29,7 +29,7 @@ function App() {
 
       {isAuthenticated && <Sidebar />}
 
-
+      <ToastContainer /> 
       <Routes>
       
         {/* <Route
@@ -60,7 +60,7 @@ function App() {
         )} */}
 
     
-        <Route path="*" element={<Navigate to={isAuthenticated ? "/overview" : "/login"} />} />
+        <Route path="*" element={<Navigate to={isAuthenticated ? "/sales" : "/login"} />} />
       </Routes>
     </div>
   );

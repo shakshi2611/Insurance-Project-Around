@@ -17,6 +17,18 @@
       "name": "Priyanka",
       "email": "priyanka@gmail.com",
       "password": "priyanka"
+    },
+    {
+      "id": "75ee",
+      "name": "Priti",
+      "email": "priti@gmail.com",
+      "password": "priti"
+    },
+    {
+      "id": "8f4e",
+      "name": "shubham",
+      "email": "subham@gmail.com",
+      "password": "subham"
     }
   ]
 }

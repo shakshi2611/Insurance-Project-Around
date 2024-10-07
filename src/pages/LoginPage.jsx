@@ -4,32 +4,33 @@ import Header from "./../components/common/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-
 		if (isLoggedIn) {
-			navigate('/overview');
+			navigate('/sales');  
 		}
 	}, [isLoggedIn, navigate]);
 
 	const handleLogin = (e) => {
-		e.preventDefault();
+		e.preventDefault();  
 		if (validate()) {
-			fetchUser(email)
+			fetchUser(email)  
 				.then((resp) => {
-					if (Object.keys(resp).length === 0) {
-						toast.error('Please Enter valid email');
+					if (!resp || resp.length === 0) {
+						toast.error('Please enter a valid email');
 					} else {
-						if (resp.password === password) {
+						const user = resp[0];
+						if (user.password === password) {
 							toast.success('Login successful');
-							setIsLoggedIn(true);
+							setIsLoggedIn(true);  
+							onLogin(); 
 						} else {
-							toast.error('Please Enter valid credentials');
+							toast.error('Invalid credentials, please try again');
 						}
 					}
 				})
@@ -40,21 +41,26 @@ const LoginPage = () => {
 	};
 
 	const fetchUser = (email) => {
-		return fetch(`http://localhost:5000/users?email=${email}`)
-			.then((res) => res.json());
+		return fetch(`http://localhost:5000/users?email=${email}`) 
+			.then((res) => {
+				if (!res.ok) {
+					throw new Error('Network response was not ok');
+				}
+				return res.json();
+			});
 	};
 
 	const validate = () => {
 		let result = true;
 		if (email === '' || email === null) {
 			result = false;
-			toast.warning('Please Enter Email');
+			toast.warning('Please enter your email');
 		}
 		if (password === '' || password === null) {
 			result = false;
-			toast.warning('Please Enter password');
+			toast.warning('Please enter your password');
 		}
-		return result;
+		return result;  
 	};
 
 	return (
@@ -68,7 +74,7 @@ const LoginPage = () => {
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
-							backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light background
+							backgroundColor: 'rgba(255, 255, 255, 0.1)', 
 							borderRadius: 2,
 							padding: 3,
 							boxShadow: 3,
