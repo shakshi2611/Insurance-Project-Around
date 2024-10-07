@@ -2,9 +2,7 @@ import {
   BarChart2,
   ShoppingBag,
   Users,
-  Zap,
-  Search,
-  Download,
+  Zap
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -18,9 +16,7 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Typography,
-  TextField,
-  Button,
+  Typography
 } from "@mui/material";
 
 const OverviewPage = () => {

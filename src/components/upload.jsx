@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { useNavigate } from "react-router-dom";
 import { Button, Grid, Typography, Card, CardContent } from '@mui/material';
 
 const UploadSection = () => {
+  const navigate = useNavigate(); 
   const [insuranceFiles, setInsuranceFiles] = useState([]);
   const [brokerFile, setBrokerFile] = useState(null);
 
@@ -124,8 +126,8 @@ const UploadSection = () => {
             color="primary"
             style={{ padding: '10px 20px', fontSize: '16px', borderRadius: '8px' }}
             onClick={() => {
-              // Navigate to the second page for file comparison
               console.log('Navigating to comparison page');
+              navigate('/overview'); 
             }}
           >
             View Comparison

@@ -5,17 +5,19 @@ import { Link } from "react-router-dom";
 
 const SIDEBAR_ITEMS = [
 	{
-		name: "Overview",
+		name: "Upload",
 		icon: BarChart2,
 		color: "#6366f1",
 		href: "/",
 	},
 	// { name: "Products", icon: ShoppingBag, color: "#8B5CF6", href: "/products" },
-	{ name: "Users", icon: Users, color: "#EC4899", href: "/users" },
-	{ name: "Sales", icon: DollarSign, color: "#10B981", href: "/sales" },
+	// { name: "Users", icon: Users, color: "#EC4899", href: "/users" },
+	// { name: "Upload", icon: DollarSign, color: "#10B981", href: "/upload" },
 	// { name: "Order", icon: ShoppingCart, color: "#F59E0B", href: "/orders" },
-	{ name: "Authentication", icon: TrendingUp, color: "#3B82F6", href: "/Signup" },
+	
+	{ name: "Overview", icon: DollarSign, color: "#3B82F6", href: "/overview" },
 	{ name: "Settings", icon: Settings, color: "#6EE7B7", href: "/settings" },
+	{ name: "Authentication", icon: TrendingUp, color: "#3B82F6", href: "/Signup" },
 ];
 
 const Sidebar = () => {
