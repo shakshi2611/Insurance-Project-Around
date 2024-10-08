@@ -1,9 +1,4 @@
-import {
-  BarChart2,
-  ShoppingBag,
-  Users,
-  Zap
-} from "lucide-react";
+import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Header from "../components/common/Header";
@@ -16,7 +11,7 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Typography
+  Typography,
 } from "@mui/material";
 
 const OverviewPage = () => {
@@ -239,7 +234,7 @@ const OverviewPage = () => {
           </div>
         </div>
         <motion.div
-          classNameName="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
