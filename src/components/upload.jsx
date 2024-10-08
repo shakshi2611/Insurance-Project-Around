@@ -62,7 +62,7 @@ const UploadSection = () => {
               >
                 <input {...getInsuranceInputProps()} />
                 <p style={{ margin: 0, color: '#555' }}>Drag & drop insurance files here, or click to select files</p>
-                <em style={{ color: '#aaa' }}>(JPG, PDF, Excel, Word formats allowed)</em>
+                <em style={{ color: '#aaa' }}>(PDF, Excel, doc, Word formats allowed)</em>
               </div>
 
               {insuranceFiles.length > 0 && (
@@ -106,7 +106,7 @@ const UploadSection = () => {
               >
                 <input {...getBrokerInputProps()} />
                 <p style={{ margin: 0, color: '#555' }}>Drag & drop a broker file here, or click to select a file</p>
-                <em style={{ color: '#aaa' }}>(JPG, PDF, Excel, Word formats allowed)</em>
+                <em style={{ color: '#aaa' }}>(PDF, Excel, doc, Word formats allowed)</em>
               </div>
 
               {brokerFile && (

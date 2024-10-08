@@ -125,7 +125,7 @@ const OverviewPage = () => {
           }}
         >
           <div style={{ display: "flex", alignItems: "center" }}>
-            <div className="flex max-w-[230px] items-center justify-between gap-2 bg-gray-800 rounded-full relative">
+            <div className="flex max-w-[220px] items-center justify-between gap-2 bg-gray-800 rounded-full relative">
               <input
                 className="border-none bg-transparent outline-none text-white text-base py-6 pl-6 pr-12"
                 type="text"
@@ -203,12 +203,34 @@ const OverviewPage = () => {
               </button>
             </div>
           </div>
+          <button className="relative flex items-center font-semibold text-[20px] gap-2 p-0 m-0 bg-none border-none cursor-pointer group">
+  <p className="relative m-2 text-[20px] text-white-900 before:absolute before:inset-0 before:w-0 before:overflow-hidden before:text-red-600 before:content-['Subscribe'] before:transition-width before:duration-300 before:ease-out">
+    BankName
+  </p>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 text-white-900 transition-transform duration-200 delay-200 group-hover:translate-x-1 group-hover:text-red-600"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M14 5l7 7m0 0l-7 7m7-7H3"
+    />
+  </svg>
+  <span className="absolute w-0 left-0 bottom-[-7px] h-[2px] bg-red-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+</button>
+
+          
           <div className="container flex justify-end items-center">
-            <label className="label relative flex items-center p-1 rounded-full border-2 border-blue-600 cursor-pointer transition-all ease-out duration-400 w-40">
+            <label className="label relative flex items-center p-1 rounded-full border-2 border-blue-600 cursor-pointer transition-all ease-out duration-400 w-32">
               <input type="checkbox" className="input hidden" />
               <span className="circle flex justify-center items-center h-11 w-11 rounded-full bg-blue-600 relative overflow-hidden transition-all ease-out duration-400 shadow-none">
                 <svg
-                  className="icon text-white w-7 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ease-out duration-400"
+                  className="icon text-white w-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ease-out duration-400"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -225,7 +247,7 @@ const OverviewPage = () => {
                 <div className="square w-4 aspect-square rounded-sm bg-white opacity-0 invisible absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ease-out duration-400"></div>
               </span>
               <p className="title absolute right-4 bottom-3 text-white text-lg transition-all ease-out duration-400">
-                Download
+                Export
               </p>
               <p className="title absolute right-4 bottom-3 text-white text-lg opacity-0 invisible">
                 Open
