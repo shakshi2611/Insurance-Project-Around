@@ -16,9 +16,7 @@ import {
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
-  // const [searchTerm, setSearchTerm] = useState("");
-
-  // Dummy data for demonstration
+ 
   const allData = [
     {
       name: "Insurance A",
@@ -52,13 +50,6 @@ const OverviewPage = () => {
   ];
   const negativeData = [];
 
-  // const handleSearch = () => {
-  //   console.log("Searching for:", searchTerm);
-  // };
-
-  // const handleExport = () => {
-  //   console.log("Exporting data...");
-  // };
 
   const renderTable = (data, title) => (
     <div style={{ marginTop: "30px" }}>

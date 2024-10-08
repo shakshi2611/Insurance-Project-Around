@@ -3,7 +3,7 @@ import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import axios from 'axios'; // Import axios
+import axios from 'axios'; 
 
 const LoginPage = ({ onLogin }) => {
     const [email, setEmail] = useState("");
@@ -44,9 +44,9 @@ const LoginPage = ({ onLogin }) => {
     const fetchUser = async (email) => {
         try {
             const response = await axios.get(`http://localhost:5000/users`, {
-                params: { email: email } // Use params for query parameters
+                params: { email: email } 
             });
-            return response.data; // Return the response data
+            return response.data; 
         } catch (error) {
             throw new Error('Network response was not ok');
         }
