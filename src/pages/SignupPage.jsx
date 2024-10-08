@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import Header from "./../components/common/Header";
 import { toast } from "react-toastify";
+import axios from 'axios'; 
 
 const SignupPage = () => {
   const [name, setName] = useState("");
@@ -10,7 +11,7 @@ const SignupPage = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // Check if user is already logged in
+
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
@@ -18,21 +19,14 @@ const SignupPage = () => {
     }
   }, [navigate]);
 
-  // Handle Signup Submission
   const handleSignup = (e) => {
     e.preventDefault();
     const regobj = { name, email, password };
 
-    // Simulate API call for user registration
-    fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(regobj),
-    })
-      .then((res) => {
+    axios.post("http://localhost:5000/users", regobj)
+      .then(() => {
         toast.success("Registered Successfully");
-        
-        navigate("/login"); // Navigate to login page after successful signup
+        navigate("/login");
       })
       .catch((err) => {
         toast.error("Failed: " + err.message);
@@ -50,7 +44,7 @@ const SignupPage = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              backgroundColor: "rgba(255, 255, 255, 0.1)", // Light background
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
               borderRadius: 2,
               padding: 3,
               boxShadow: 3,

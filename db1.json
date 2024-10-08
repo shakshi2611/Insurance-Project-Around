@@ -29,22 +29,28 @@
       "name": "shubham",
       "email": "subham@gmail.com",
       "password": "subham"
+    },
+    {
+      "id": "91c1",
+      "name": "ranjana",
+      "email": "ranjana@gmail.com",
+      "password": "ranjana"
     }
   ],
   "orders": [
-      {
-        "id": 1,
-        "userId": 1,
-        "product": "Laptop",
-        "amount": 1200,
-        "status": "Delivered"
-      },
-      {
-        "id": 2,
-        "userId": 2,
-        "product": "Smartphone",
-        "amount": 800,
-        "status": "Shipped"
-      }
-    ]
+    {
+      "id": "1",
+      "userId": 1,
+      "product": "Laptop",
+      "amount": 1200,
+      "status": "Delivered"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "product": "Smartphone",
+      "amount": 800,
+      "status": "Shipped"
+    }
+  ]
 }
