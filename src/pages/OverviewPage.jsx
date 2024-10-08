@@ -16,7 +16,7 @@ import {
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   // Dummy data for demonstration
   const allData = [
@@ -52,13 +52,13 @@ const OverviewPage = () => {
   ];
   const negativeData = [];
 
-  const handleSearch = () => {
-    console.log("Searching for:", searchTerm);
-  };
+  // const handleSearch = () => {
+  //   console.log("Searching for:", searchTerm);
+  // };
 
-  const handleExport = () => {
-    console.log("Exporting data...");
-  };
+  // const handleExport = () => {
+  //   console.log("Exporting data...");
+  // };
 
   const renderTable = (data, title) => (
     <div style={{ marginTop: "30px" }}>
