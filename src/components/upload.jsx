@@ -2,18 +2,56 @@ import { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useNavigate } from "react-router-dom";
 import { Button, Grid, Typography, Card, CardContent } from '@mui/material';
+import { PDFDocument } from 'pdf-lib';
+import * as XLSX from 'xlsx';
+import mammoth from 'mammoth';
 
 const UploadSection = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [insuranceFiles, setInsuranceFiles] = useState([]);
   const [brokerFile, setBrokerFile] = useState(null);
 
   const onInsuranceDrop = (acceptedFiles) => {
     setInsuranceFiles([...insuranceFiles, ...acceptedFiles]);
+    acceptedFiles.forEach(file => handleFileData(file));
   };
 
   const onBrokerDrop = (acceptedFiles) => {
     setBrokerFile(acceptedFiles[0]);
+    handleFileData(acceptedFiles[0]);
+  };
+
+  const handleFileData = async (file) => {
+    const fileType = file.name.split('.').pop().toLowerCase();
+
+    if (fileType === 'pdf') {
+      const pdfBytes = await file.arrayBuffer();
+      const pdfDoc = await PDFDocument.load(pdfBytes);
+      const text = await extractTextFromPDF(pdfDoc);
+      console.log('PDF Data:', text);
+    } else if (fileType === 'xls' || fileType === 'xlsx') {
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data, { type: 'array' });
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet);
+      console.log('Excel Data:', jsonData);
+    } else if (fileType === 'doc' || fileType === 'docx') {
+      const arrayBuffer = await file.arrayBuffer();
+      const result = await mammoth.extractRawText({ arrayBuffer });
+      console.log('Word Data:', result.value);
+    }
+  };
+
+  const extractTextFromPDF = async (pdfDoc) => {
+    let text = '';
+    const numPages = pdfDoc.getPageCount();
+    for (let i = 0; i < numPages; i++) {
+      const page = pdfDoc.getPage(i);
+      const pageText = await page.getTextContent();
+      text += pageText.items.map(item => item.str).join(' ');
+    }
+    return text;
   };
 
   const { getRootProps: getInsuranceRootProps, getInputProps: getInsuranceInputProps } = useDropzone({
@@ -127,7 +165,7 @@ const UploadSection = () => {
             style={{ padding: '10px 20px', fontSize: '16px', borderRadius: '8px' }}
             onClick={() => {
               console.log('Navigating to comparison page');
-              navigate('/overview'); 
+              navigate('/overview');
             }}
           >
             View Comparison

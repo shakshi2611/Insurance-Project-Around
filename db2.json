@@ -1,5 +1,5 @@
 {
-    "users": [
+    "Files": [
       {
         "id": 1,
         "name": "John Doe",
@@ -12,22 +12,7 @@
         "email": "janesmith@example.com",
         "phone": "555-123-4567"
       }
-    ],
-    "orders": [
-      {
-        "id": 1,
-        "userId": 1,
-        "product": "Laptop",
-        "amount": 1200,
-        "status": "Delivered"
-      },
-      {
-        "id": 2,
-        "userId": 2,
-        "product": "Smartphone",
-        "amount": 800,
-        "status": "Shipped"
-      }
     ]
+  
   }
   
