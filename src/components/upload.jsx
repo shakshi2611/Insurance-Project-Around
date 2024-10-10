@@ -5,6 +5,7 @@ import { Button, Grid, Typography, Card, CardContent } from '@mui/material';
 import { PDFDocument } from 'pdf-lib';
 import * as XLSX from 'xlsx';
 import mammoth from 'mammoth';
+import axios from 'axios';
 
 const UploadSection = () => {
   const navigate = useNavigate();
@@ -24,22 +25,28 @@ const UploadSection = () => {
   const handleFileData = async (file) => {
     const fileType = file.name.split('.').pop().toLowerCase();
 
+    let fileData = null;
+
     if (fileType === 'pdf') {
       const pdfBytes = await file.arrayBuffer();
       const pdfDoc = await PDFDocument.load(pdfBytes);
       const text = await extractTextFromPDF(pdfDoc);
-      console.log('PDF Data:', text);
+      fileData = { type: 'pdf', content: text };
     } else if (fileType === 'xls' || fileType === 'xlsx') {
       const data = await file.arrayBuffer();
       const workbook = XLSX.read(data, { type: 'array' });
       const sheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[sheetName];
       const jsonData = XLSX.utils.sheet_to_json(worksheet);
-      console.log('Excel Data:', jsonData);
+      fileData = { type: 'excel', content: jsonData };
     } else if (fileType === 'doc' || fileType === 'docx') {
       const arrayBuffer = await file.arrayBuffer();
       const result = await mammoth.extractRawText({ arrayBuffer });
-      console.log('Word Data:', result.value);
+      fileData = { type: 'word', content: result.value };
+    }
+
+    if (fileData) {
+      await sendFileDataToServer(file.name, fileData);
     }
   };
 
@@ -52,6 +59,19 @@ const UploadSection = () => {
       text += pageText.items.map(item => item.str).join(' ');
     }
     return text;
+  };
+
+  const sendFileDataToServer = async (fileName, fileData) => {
+    try {
+      const response = await axios.post('http://localhost:5001/Files', {
+        name: fileName,
+        type: fileData.type,
+        content: fileData.content,
+      });
+      console.log('File data stored successfully:', response.data);
+    } catch (error) {
+      console.error('Error storing file data:', error);
+    }
   };
 
   const { getRootProps: getInsuranceRootProps, getInputProps: getInsuranceInputProps } = useDropzone({

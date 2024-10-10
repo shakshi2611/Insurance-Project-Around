@@ -1,18 +1,296 @@
 {
-    "Files": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "phone": "555-555-5555"
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "email": "janesmith@example.com",
-        "phone": "555-123-4567"
-      }
-    ]
-  
-  }
-  
+  "Files": [
+    {
+      "id": "548a",
+      "name": "Ledger Entries in Columns.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Date": 45036,
+          "Voucher Type ": "Sales",
+          "Invoice Number": 201,
+          "Party Name": "National Traders",
+          "Item Name": "Pen",
+          " Quantity": 5,
+          "UOM": " Nos",
+          " Rate ": 315,
+          "  Value ": 1575,
+          "Tax - CGST @ 9 %": 141.75,
+          "Tax - SGST @ 9 %": 141.75,
+          "Invoice Amt": 1858.5
+        },
+        {
+          "Date": 45037,
+          "Voucher Type ": "Sales",
+          "Invoice Number": 202,
+          "Party Name": "Titan Corporation",
+          "Item Name": "Eraser",
+          " Quantity": 10,
+          "UOM": " Nos",
+          " Rate ": 30,
+          "  Value ": 300,
+          "Tax - CGST @ 9 %": 27,
+          "Tax - SGST @ 9 %": 27,
+          "Invoice Amt": 2986.58
+        },
+        {
+          "Item Name": "Pencil ",
+          " Quantity": 3,
+          "UOM": " Nos",
+          " Rate ": 12,
+          "  Value ": 36,
+          "Tax - CGST @ 9 %": 3.2399999999999998,
+          "Tax - SGST @ 9 %": 3.2399999999999998
+        },
+        {
+          "Item Name": "Glue- Fevicol",
+          " Quantity": 4,
+          "UOM": " Nos",
+          " Rate ": 50,
+          "  Value ": 200,
+          "Tax - CGST @ 9 %": 18,
+          "Tax - SGST @ 9 %": 18
+        },
+        {
+          "Item Name": "Marker-Blue",
+          " Quantity": 7,
+          "UOM": " Nos",
+          " Rate ": 83,
+          "  Value ": 581,
+          "Tax - CGST @ 9 %": 52.29,
+          "Tax - SGST @ 9 %": 52.29
+        },
+        {
+          "Item Name": "Marker-Green",
+          " Quantity": 8,
+          "UOM": " Nos",
+          " Rate ": 83,
+          "  Value ": 664,
+          "Tax - CGST @ 9 %": 59.76,
+          "Tax - SGST @ 9 %": 59.76
+        },
+        {
+          "Item Name": "Highlighter- Red",
+          " Quantity": 10,
+          "UOM": " Nos",
+          " Rate ": 75,
+          "  Value ": 750,
+          "Tax - CGST @ 9 %": 67.5,
+          "Tax - SGST @ 9 %": 67.5
+        },
+        {
+          "Date": 45039,
+          "Voucher Type ": "Sales",
+          "Invoice Number": 203,
+          "Party Name": "United Traders",
+          "Item Name": "Paper Clips",
+          " Quantity": 12,
+          "UOM": " Nos",
+          " Rate ": 64,
+          "  Value ": 768,
+          "Tax - CGST @ 9 %": 69.12,
+          "Tax - SGST @ 9 %": 69.12,
+          "Invoice Amt": 2194.8
+        },
+        {
+          "Item Name": "Whiteboard",
+          " Quantity": 7,
+          "UOM": " Nos",
+          " Rate ": 156,
+          "  Value ": 1092,
+          "Tax - CGST @ 9 %": 98.28,
+          "Tax - SGST @ 9 %": 98.28
+        },
+        {
+          "Date": 45036,
+          "Voucher Type ": "Sales",
+          "Invoice Number": 204,
+          "Party Name": "National Traders",
+          "Item Name": "Scissors",
+          " Quantity": 4,
+          "UOM": " Nos",
+          " Rate ": 88,
+          "  Value ": 352,
+          "Tax - CGST @ 9 %": 31.68,
+          "Tax - SGST @ 9 %": 31.68,
+          "Invoice Amt": 1098.58
+        },
+        {
+          "Item Name": "Envelope",
+          " Quantity": 3,
+          "UOM": " Nos",
+          " Rate ": 15,
+          "  Value ": 45,
+          "Tax - CGST @ 9 %": 4.05,
+          "Tax - SGST @ 9 %": 4.05
+        },
+        {
+          "Item Name": "Folder",
+          " Quantity": 2,
+          "UOM": " Nos",
+          " Rate ": 97,
+          "  Value ": 194,
+          "Tax - CGST @ 9 %": 17.46,
+          "Tax - SGST @ 9 %": 17.46
+        },
+        {
+          "Item Name": "Sketch Pen",
+          " Quantity": 5,
+          "UOM": " Nos",
+          " Rate ": 68,
+          "  Value ": 340,
+          "Tax - CGST @ 9 %": 30.599999999999998,
+          "Tax - SGST @ 9 %": 30.599999999999998
+        }
+      ]
+    },
+    {
+      "id": "e450",
+      "name": "Employee with Salary Details.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Name": "Anish Parhi",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45047,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 4000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 3000
+        },
+        {
+          "Name": "Rahul Dang",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45048,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 24000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Salary - Pay Head": "Personal Allowance",
+          "Salary - Rate": 5000
+        },
+        {
+          "Name": "Deepak K",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45049,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 30000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Name": "Ratna Jani",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Name": "Jomy Stephen",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 40000
+        },
+        {
+          "Salary - Pay Head": "Night Shift Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 30000
+        }
+      ]
+    },
+    {
+      "id": "eb3f",
+      "name": "Employee with Salary Details.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Name": "Anish Parhi",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45047,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 4000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 3000
+        },
+        {
+          "Name": "Rahul Dang",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45048,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 24000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Salary - Pay Head": "Personal Allowance",
+          "Salary - Rate": 5000
+        },
+        {
+          "Name": "Deepak K",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45049,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 30000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Name": "Ratna Jani",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Name": "Jomy Stephen",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 40000
+        },
+        {
+          "Salary - Pay Head": "Night Shift Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 30000
+        }
+      ]
+    }
+  ]
+}
