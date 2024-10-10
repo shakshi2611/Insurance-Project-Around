@@ -16,8 +16,9 @@ import {
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
- 
-  const allData = [
+
+  // Sample JSON data for insurance and broker files
+  const insuranceData = [
     {
       name: "Insurance A",
       policyNumber: "123456",
@@ -32,24 +33,35 @@ const OverviewPage = () => {
     },
   ];
 
-  const matchData = [
+  const brokerData = [
     {
-      name: "Insurance A",
+      name: "Broker A",
       policyNumber: "123456",
       amount: 1000,
-      percentage: 10,
+      percentage: 12,
     },
-  ];
-  const positiveData = [
     {
-      name: "Insurance B",
+      name: "Broker B",
       policyNumber: "654321",
-      amount: 2000,
-      percentage: 20,
+      amount: 1800,
+      percentage: 22,
     },
   ];
-  const negativeData = [];
 
+  // Comparing insurance data with broker data
+  const matchData = insuranceData.filter(insurance =>
+    brokerData.some(broker => broker.policyNumber === insurance.policyNumber)
+  );
+
+  const positiveData = insuranceData.filter(insurance => {
+    const broker = brokerData.find(broker => broker.policyNumber === insurance.policyNumber);
+    return broker && insurance.percentage < broker.percentage;
+  });
+
+  const negativeData = insuranceData.filter(insurance => {
+    const broker = brokerData.find(broker => broker.policyNumber === insurance.policyNumber);
+    return broker && insurance.percentage > broker.percentage;
+  });
 
   const renderTable = (data, title) => (
     <div style={{ marginTop: "30px" }}>
@@ -246,6 +258,7 @@ const OverviewPage = () => {
             </label>
           </div>
         </div>
+
         <motion.div
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -282,15 +295,14 @@ const OverviewPage = () => {
           />
         </motion.div>
 
-        {activeTable === "allData" && renderTable(allData, "All Data")}
+        {activeTable === "allData" && renderTable(insuranceData.concat(brokerData), "All Data")}
         {activeTable === "matchData" && renderTable(matchData, "Match Data")}
-        {activeTable === "positiveData" &&
-          renderTable(positiveData, "+ Count Data")}
-        {activeTable === "negativeData" &&
-          renderTable(negativeData, "- Count Data")}
+        {activeTable === "positiveData" && renderTable(positiveData, "+ Count Data")}
+        {activeTable === "negativeData" && renderTable(negativeData, "- Count Data")}
       </main>
     </div>
   );
 };
 
 export default OverviewPage;
+

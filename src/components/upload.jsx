@@ -14,15 +14,15 @@ const UploadSection = () => {
 
   const onInsuranceDrop = (acceptedFiles) => {
     setInsuranceFiles([...insuranceFiles, ...acceptedFiles]);
-    acceptedFiles.forEach(file => handleFileData(file));
+    acceptedFiles.forEach(file => handleFileData(file, 'insuranceFiles')); // Send insurance files to insuranceFiles endpoint
   };
 
   const onBrokerDrop = (acceptedFiles) => {
     setBrokerFile(acceptedFiles[0]);
-    handleFileData(acceptedFiles[0]);
+    handleFileData(acceptedFiles[0], 'brokerFiles'); // Send broker file to brokerFiles endpoint
   };
 
-  const handleFileData = async (file) => {
+  const handleFileData = async (file, endpoint) => {
     const fileType = file.name.split('.').pop().toLowerCase();
 
     let fileData = null;
@@ -46,7 +46,7 @@ const UploadSection = () => {
     }
 
     if (fileData) {
-      await sendFileDataToServer(file.name, fileData);
+      await sendFileDataToServer(file.name, fileData, endpoint);
     }
   };
 
@@ -61,16 +61,16 @@ const UploadSection = () => {
     return text;
   };
 
-  const sendFileDataToServer = async (fileName, fileData) => {
+  const sendFileDataToServer = async (fileName, fileData, endpoint) => {
     try {
-      const response = await axios.post('http://localhost:5001/Files', {
+      const response = await axios.post(`http://localhost:5001/${endpoint}`, {
         name: fileName,
         type: fileData.type,
         content: fileData.content,
       });
-      console.log('File data stored successfully:', response.data);
+      console.log(`File data stored successfully in ${endpoint}:`, response.data);
     } catch (error) {
-      console.error('Error storing file data:', error);
+      console.error(`Error storing file data in ${endpoint}:`, error);
     }
   };
 

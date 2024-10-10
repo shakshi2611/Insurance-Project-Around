@@ -1,7 +1,7 @@
 {
-  "Files": [
+  "insuranceFiles": [
     {
-      "id": "548a",
+      "id": "b717",
       "name": "Ledger Entries in Columns.xlsx",
       "type": "excel",
       "content": [
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "id": "e450",
+      "id": "2f6b",
       "name": "Employee with Salary Details.xlsx",
       "type": "excel",
       "content": [
@@ -219,7 +219,157 @@
       ]
     },
     {
-      "id": "eb3f",
+      "id": "41a7",
+      "name": "Employee with Salary Details.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Name": "Anish Parhi",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45047,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 4000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 3000
+        },
+        {
+          "Name": "Rahul Dang",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45048,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 24000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Salary - Pay Head": "Personal Allowance",
+          "Salary - Rate": 5000
+        },
+        {
+          "Name": "Deepak K",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45049,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 30000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Name": "Ratna Jani",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Name": "Jomy Stephen",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 40000
+        },
+        {
+          "Salary - Pay Head": "Night Shift Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 30000
+        }
+      ]
+    }
+  ],
+  "brokerFiles": [
+    {
+      "id": "1b59",
+      "name": "Employee with Salary Details.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Name": "Anish Parhi",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45047,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 4000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 3000
+        },
+        {
+          "Name": "Rahul Dang",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45048,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 24000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Salary - Pay Head": "Personal Allowance",
+          "Salary - Rate": 5000
+        },
+        {
+          "Name": "Deepak K",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45049,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 30000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Name": "Ratna Jani",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 15000
+        },
+        {
+          "Salary - Pay Head": "Dearness Allowance",
+          "Salary - Rate": 10000
+        },
+        {
+          "Name": "Jomy Stephen",
+          "Group Name": "Employee",
+          "Salary - Effective From": 45051,
+          "Salary - Pay Head": "Basic Pay",
+          "Salary - Rate": 40000
+        },
+        {
+          "Salary - Pay Head": "Night Shift Allowance",
+          "Salary - Rate": 20000
+        },
+        {
+          "Salary - Pay Head": "House Rent Allowance",
+          "Salary - Rate": 30000
+        }
+      ]
+    },
+    {
+      "id": "7f6b",
       "name": "Employee with Salary Details.xlsx",
       "type": "excel",
       "content": [
