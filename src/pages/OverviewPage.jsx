@@ -30,8 +30,11 @@ const OverviewPage = () => {
         const insuranceResponse = await axios.get('http://localhost:5001/insuranceFiles');
         const brokerResponse = await axios.get('http://localhost:5001/brokerFiles');
         
-        setInsuranceData(insuranceResponse.data); // Set insurance data
-        setBrokerData(brokerResponse.data); // Set broker data
+        const flattenedInsuranceData = insuranceResponse.data.flatMap(file => file.content);
+        const flattenedBrokerData = brokerResponse.data.flatMap(file => file.content);
+
+        setInsuranceData(flattenedInsuranceData); // Set insurance content data
+        setBrokerData(flattenedBrokerData); // Set broker content data
       } catch (err) {
         setError(err.message); // Set error message
       } finally {
@@ -42,19 +45,19 @@ const OverviewPage = () => {
     fetchData();
   }, []);
 
-  // Comparing insurance data with broker data
-  const matchData = insuranceData.filter(insurance =>
-    brokerData.some(broker => broker.policyNumber === insurance.policyNumber)
+   // Comparing insurance data with broker data
+   const matchData = insuranceData.filter(insurance =>
+    brokerData.some(broker => broker["Policy Number"] === insurance["Policy Number"])
   );
 
   const positiveData = insuranceData.filter(insurance => {
-    const broker = brokerData.find(broker => broker.policyNumber === insurance.policyNumber);
-    return broker && insurance.percentage < broker.percentage;
+    const broker = brokerData.find(broker => broker["Policy Number"] === insurance["Policy Number"]);
+    return broker && insurance.Percentage < broker.Percentage;
   });
 
   const negativeData = insuranceData.filter(insurance => {
-    const broker = brokerData.find(broker => broker.policyNumber === insurance.policyNumber);
-    return broker && insurance.percentage > broker.percentage;
+    const broker = brokerData.find(broker => broker["Policy Number"] === insurance["Policy Number"]);
+    return broker && insurance.Percentage > broker.Percentage;
   });
 
   const renderTable = (data, title) => (
@@ -82,10 +85,10 @@ const OverviewPage = () => {
             {data.length > 0 ? (
               data.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.name}</TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.policyNumber}</TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.amount}</TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.percentage}%</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item.Name}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item["Policy Number"]}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item.Amount}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item.Percentage}%</TableCell>
                 </TableRow>
               ))
             ) : (
