@@ -8,6 +8,7 @@ import UserRetention from "../components/analytics/UserRetention";
 import CustomerSegmentation from "../components/analytics/CustomerSegmentation";
 import AIPoweredInsights from "../components/analytics/AIPoweredInsights";
 
+
 const AnalyticsPage = () => {
 	return (
 		<div className='flex-1 overflow-auto relative z-10 bg-gray-900'>
