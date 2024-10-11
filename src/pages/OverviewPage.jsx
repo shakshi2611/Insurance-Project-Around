@@ -17,10 +17,10 @@ import {
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
-  const [insuranceData, setInsuranceData] = useState([]); // State for insurance data
-  const [brokerData, setBrokerData] = useState([]); // State for broker data
-  const [loading, setLoading] = useState(true); // State for loading
-  const [error, setError] = useState(null); // State for error
+  const [insuranceData, setInsuranceData] = useState([]); 
+  const [brokerData, setBrokerData] = useState([]);
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
 
   useEffect(() => {
@@ -33,10 +33,10 @@ const OverviewPage = () => {
         const flattenedInsuranceData = insuranceResponse.data.flatMap(file => file.content);
         const flattenedBrokerData = brokerResponse.data.flatMap(file => file.content);
 
-        setInsuranceData(flattenedInsuranceData); // Set insurance content data
-        setBrokerData(flattenedBrokerData); // Set broker content data
+        setInsuranceData(flattenedInsuranceData); 
+        setBrokerData(flattenedBrokerData); 
       } catch (err) {
-        setError(err.message); // Set error message
+        setError(err.message); 
       } finally {
         setLoading(false);
       }
@@ -45,7 +45,6 @@ const OverviewPage = () => {
     fetchData();
   }, []);
 
-   // Comparing insurance data with broker data
    const matchData = insuranceData.filter(insurance =>
     brokerData.some(broker => broker["Policy Number"] === insurance["Policy Number"])
   );
@@ -75,9 +74,10 @@ const OverviewPage = () => {
         <Table>
           <TableHead>
             <TableRow>
+              <TableCell sx={{ color: "#6366F1" }}>Bank Name</TableCell>
               <TableCell sx={{ color: "#6366F1" }}>Name</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Policy Number</TableCell>
-              <TableCell sx={{ color: "#6366f1" }}>Amount</TableCell>
+              <TableCell sx={{ color: "#6366f1" }}>Vehicle Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Percentage</TableCell>
             </TableRow>
           </TableHead>
@@ -85,9 +85,10 @@ const OverviewPage = () => {
             {data.length > 0 ? (
               data.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.Name}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item["Bank Name"]}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item["Name"]}</TableCell>
                   <TableCell sx={{ color: "#9ca3af" }}>{item["Policy Number"]}</TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>{item.Amount}</TableCell>
+                  <TableCell sx={{ color: "#9ca3af" }}>{item["Vehicle Number"]}</TableCell>
                   <TableCell sx={{ color: "#9ca3af" }}>{item.Percentage}%</TableCell>
                 </TableRow>
               ))
@@ -107,7 +108,7 @@ const OverviewPage = () => {
     </div>
   );
 
-  // Loading and error handling
+
   if (loading) return <Typography>Loading...</Typography>;
   if (error) return <Typography>Error: {error}</Typography>;
 
@@ -116,7 +117,7 @@ const OverviewPage = () => {
       <Header title="Overview" />
 
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
-        {/* Your existing component code */}
+ 
         <motion.div
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -126,28 +127,28 @@ const OverviewPage = () => {
           <StatCard
             name="All Data"
             icon={Zap}
-            value="$12,345" // You may want to compute this dynamically based on your data
+            value="$12,345" 
             color="#6366F1"
             onViewClick={() => setActiveTable("allData")}
           />
           <StatCard
             name="Match Data"
             icon={Users}
-            value={matchData.length} // Dynamically computed value
+            value={matchData.length}
             color="#8B5CF6"
             onViewClick={() => setActiveTable("matchData")}
           />
           <StatCard
             name="+ Count Data"
             icon={ShoppingBag}
-            value={positiveData.length} // Dynamically computed value
+            value={positiveData.length} 
             color="#EC4899"
             onViewClick={() => setActiveTable("positiveData")}
           />
           <StatCard
             name="- Count Data"
             icon={BarChart2}
-            value={negativeData.length} // Dynamically computed value
+            value={negativeData.length} 
             color="#10B981"
             onViewClick={() => setActiveTable("negativeData")}
           />
