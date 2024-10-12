@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import axios from "axios"; // Import Axios
 import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable"; 
+import { Document, Packer, Paragraph } from "docx";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import {
   Table,
@@ -21,10 +24,8 @@ import {
   IconButton,
   Menu,
 } from "@mui/material";
-import { MoreVert } from "@mui/icons-material"; // Import MoreVert for dropdown icon
-import * as XLSX from "xlsx"; // Import XLSX for Excel export
-import jsPDF from "jspdf"; // Import jsPDF for PDF export
-import { Document, Packer, Paragraph } from "docx";
+import * as XLSX from "xlsx"; 
+
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
@@ -167,66 +168,84 @@ const OverviewPage = () => {
     XLSX.writeFile(workbook, "data.xlsx");
   };
 
-  const exportToPDF = (data) => {
-    const doc = new jsPDF();
-    doc.text("Exported Data", 20, 20);
-    const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "Percentage"];
-    const tableRows = data.map(item => [
-      item["Bank Name"],
-      item["Name"],
-      item["Policy Number"],
-      item["Vehicle Number"],
-      `${item.Percentage}%`
-    ]);
+ // Updated PDF export function
+const exportToPDF = (data) => {
+  const doc = new jsPDF();
+  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "Percentage"];
+  const tableRows = data.map(item => [
+    item["Bank Name"],
+    item["Name"],
+    item["Policy Number"],
+    item["Vehicle Number"],
+    `${item.Percentage}%`
+  ]);
 
-    doc.autoTable(tableColumn, tableRows, { startY: 30 });
-    doc.save("data.pdf");
-  };
+  doc.autoTable({
+    head: [tableColumn],
+    body: tableRows,
+    startY: 30,
+  });
+  doc.save("data.pdf");
+};
 
-  const exportToDOC = (data) => {
-    const doc = new Document();
-    const table = data.map(item => [
+const exportToDOC = (data) => {
+  const doc = new Document();
+
+  doc.addSection({
+    properties: {},
+    children: [
+      new Paragraph({
+        text: "Exported Data",
+        heading: "Heading1",
+      }),
+      new Paragraph({
+        text: "", 
+      }),
+    ],
+  });
+
+  // Create the table rows with proper formatting
+  const rows = data.map(item => {
+    return [
       new Paragraph(item["Bank Name"]),
       new Paragraph(item["Name"]),
       new Paragraph(item["Policy Number"]),
       new Paragraph(item["Vehicle Number"]),
       new Paragraph(`${item.Percentage}%`),
-    ]);
+    ];
+  });
 
-    // Add a simple table
-    doc.addSection({
-      children: [
-        new Paragraph({
-          text: "Exported Data",
-          heading: "Heading1"
-        }),
-        {
-          type: 'table',
-          rows: table.map(row => {
-            return {
-              children: row.map(cell => {
-                return {
-                  children: [cell],
-                  width: 1000 // Specify the cell width
-                };
-              }),
-              height: 300 // Specify the row height
-            };
-          })
-        },
-      ],
-    });
+  // Add the table to the document
+  doc.addSection({
+    properties: {},
+    children: [
+      {
+        type: "table",
+        rows: rows.map(row => ({
+          children: row.map(cell => ({
+            children: [cell],
+          })),
+        })),
+      },
+    ],
+  });
 
-    Packer.toBlob(doc).then(blob => {
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "data.docx";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-  };
+  // Export the document
+  Packer.toBlob(doc).then(blob => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "data.docx"; // Set the file name for download
+    document.body.appendChild(link); // Append link to body
+    link.click(); // Programmatically click the link to trigger download
+    document.body.removeChild(link); // Remove the link from the document
+  }).catch(err => {
+    console.error("Error exporting to DOCX:", err); // Log any errors
+  });
+};
+
+
+
 
   if (loading) return <Typography>Loading...</Typography>;
   if (error) return <Typography>Error: {error}</Typography>;
@@ -254,7 +273,7 @@ const OverviewPage = () => {
               aria-haspopup="true"
               onClick={(event) => setAnchorEl(event.currentTarget)}
             >
-             <FileDownloadIcon style={{ color: 'white' }} />
+            <FileDownloadIcon style={{ color: 'white' }} />
             </IconButton>
 
             <Menu
