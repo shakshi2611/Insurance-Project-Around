@@ -35,6 +35,12 @@
       "name": "ranjana",
       "email": "ranjana@gmail.com",
       "password": "ranjana"
+    },
+    {
+      "id": "ba75",
+      "name": "Kapil",
+      "email": "kapil@gmail.com",
+      "password": "kapil"
     }
   ],
   "orders": [
@@ -42,14 +48,14 @@
       "id": "1",
       "userId": 1,
       "product": "Laptop",
-      "amount": 1200,
+      "percentage": 1200,
       "status": "Delivered"
     },
     {
       "id": "2",
       "userId": 2,
       "product": "Smartphone",
-      "amount": 800,
+      "percentage": 800,
       "status": "Shipped"
     }
   ]

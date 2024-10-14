@@ -19,7 +19,7 @@ const UploadSection = () => {
 
   const onBrokerDrop = (acceptedFiles) => {
     setBrokerFile(acceptedFiles[0]);
-    handleFileData(acceptedFiles[0], 'brokerFiles'); // Send broker file to brokerFiles endpoint
+    handleFileData(acceptedFiles[0], 'brokerFiles');
   };
 
   const handleFileData = async (file, endpoint) => {
@@ -85,6 +85,8 @@ const UploadSection = () => {
     accept: '.jpg, .jpeg, .pdf, .xls, .xlsx, .doc, .docx',
     multiple: false,
   });
+
+  const isButtonDisabled = insuranceFiles.length === 0 || !brokerFile;
 
   return (
     <div style={{ padding: '20px' }}>
@@ -184,9 +186,10 @@ const UploadSection = () => {
             color="primary"
             style={{ padding: '10px 20px', fontSize: '16px', borderRadius: '8px' }}
             onClick={() => {
-              console.log('Navigating to comparison page');
+              // console.log('Navigating to comparison page');
               navigate('/overview');
             }}
+            disabled={isButtonDisabled}
           >
             View Comparison
           </Button>

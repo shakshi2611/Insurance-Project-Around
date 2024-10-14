@@ -17,27 +17,26 @@ const LoginPage = ({ onLogin }) => {
         }
     }, [isLoggedIn, navigate]);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();  
         if (validate()) {
-            fetchUser(email)  
-                .then((resp) => {
-                    if (!resp || resp.length === 0) {
-                        toast.error('Please enter a valid email');
+            try {
+                const resp = await fetchUser(email);
+                if (!resp || resp.length === 0) {
+                    toast.error('Please enter a valid email');
+                } else {
+                    const user = resp[0];
+                    if (user.password === password) {
+                        toast.success('Login successful');
+                        onLogin(); // Call the onLogin function
+                        navigate('/sales'); // Navigate directly after successful login
                     } else {
-                        const user = resp[0];
-                        if (user.password === password) {
-                            toast.success('Login successful');
-                            setIsLoggedIn(true);  
-                            onLogin(); 
-                        } else {
-                            toast.error('Invalid credentials, please try again');
-                        }
+                        toast.error('Invalid credentials, please try again');
                     }
-                })
-                .catch((err) => {
-                    toast.error('Login failed due to: ' + err.message);
-                });
+                }
+            } catch (err) {
+                toast.error('Login failed: ' + err.message);
+            }
         }
     };
 
@@ -48,7 +47,7 @@ const LoginPage = ({ onLogin }) => {
             });
             return response.data; 
         } catch (error) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response was not ok' + error.message);
         }
     };
 
@@ -93,7 +92,6 @@ const LoginPage = ({ onLogin }) => {
                                 label="Email Address"
                                 type="email"
                                 autoComplete="email"
-                                autoFocus
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
@@ -111,14 +109,17 @@ const LoginPage = ({ onLogin }) => {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, mb: 2, backgroundColor: '#6366F1', '&:hover': { backgroundColor: '#4F46E5' } }}
+                                sx={{ mt: 3, mb: 2, backgroundColor: '#000000', '&:hover': { backgroundColor: '#000000' } }}
                             >
                                 Login
                             </Button>
                         </Box>
                         <Typography variant="body2" color="text.secondary">
                             New User?{" "}
-                            <Link to="/signup" style={{ color: '#6366F1', textDecoration: 'none' }}>
+                            <Link to="/signup" 
+                            style={{ color: '#fefefe', textDecoration: 'none' }}
+                                onMouseOver={(e) => e.target.style.color = 'black'}
+                                onMouseOut={(e) => e.target.style.color = '#fefefe'}>
                                 Signup here
                             </Link>
                         </Typography>

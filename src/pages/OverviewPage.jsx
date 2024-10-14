@@ -33,8 +33,9 @@ const OverviewPage = () => {
   const [brokerData, setBrokerData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedBank, setSelectedBank] = useState(""); // State for selected bank
+  const [selectedBank, setSelectedBank] = useState(""); 
   const [anchorEl, setAnchorEl] = useState(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,14 +78,14 @@ const OverviewPage = () => {
     const broker = brokerData.find(
       (broker) => broker["Policy Number"] === insurance["Policy Number"]
     );
-    return broker && insurance.Percentage < broker.Percentage;
+    return broker && insurance.percentage < broker.percentage;
   });
 
   const negativeData = insuranceData.filter((insurance) => {
     const broker = brokerData.find(
       (broker) => broker["Policy Number"] === insurance["Policy Number"]
     );
-    return broker && insurance.Percentage > broker.Percentage;
+    return broker && insurance.percentage > broker.percentage;
   });
 
   // Get unique bank names
@@ -109,7 +110,7 @@ const OverviewPage = () => {
       <TableContainer
         component={Paper}
         sx={{
-          backgroundColor: "#1f2937",
+          backgroundColor: "ffffff",
           boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         }}
       >
@@ -120,27 +121,27 @@ const OverviewPage = () => {
               <TableCell sx={{ color: "#6366F1" }}>Name</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Policy Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Vehicle Number</TableCell>
-              <TableCell sx={{ color: "#6366f1" }}>Percentage</TableCell>
+              <TableCell sx={{ color: "#6366f1" }}>percentage</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.length > 0 ? (
               data.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell sx={{ color: "#9ca3af" }}>
+                  <TableCell sx={{ color: "" }}>
                     {item["Bank Name"]}
                   </TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>
+                  <TableCell sx={{ color: "" }}>
                     {item["Name"]}
                   </TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>
+                  <TableCell sx={{ color: "" }}>
                     {item["Policy Number"]}
                   </TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>
+                  <TableCell sx={{ color: "" }}>
                     {item["Vehicle Number"]}
                   </TableCell>
-                  <TableCell sx={{ color: "#9ca3af" }}>
-                    {item.Percentage}%
+                  <TableCell sx={{ color: "" }}>
+                    {item.percentage}
                   </TableCell>
                 </TableRow>
               ))
@@ -171,13 +172,13 @@ const OverviewPage = () => {
  // Updated PDF export function
 const exportToPDF = (data) => {
   const doc = new jsPDF();
-  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "Percentage"];
+  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "percentage"];
   const tableRows = data.map(item => [
     item["Bank Name"],
     item["Name"],
     item["Policy Number"],
     item["Vehicle Number"],
-    `${item.Percentage}%`
+    `${item.percentage}`
   ]);
 
   doc.autoTable({
@@ -188,61 +189,61 @@ const exportToPDF = (data) => {
   doc.save("data.pdf");
 };
 
-const exportToDOC = (data) => {
-  const doc = new Document();
+// const exportToDOC = (data) => {
+//   const doc = new Document();
 
-  doc.addSection({
-    properties: {},
-    children: [
-      new Paragraph({
-        text: "Exported Data",
-        heading: "Heading1",
-      }),
-      new Paragraph({
-        text: "", 
-      }),
-    ],
-  });
+//   doc.addSection({
+//     properties: {},
+//     children: [
+//       new Paragraph({
+//         text: "Exported Data",
+//         heading: "Heading1",
+//       }),
+//       new Paragraph({
+//         text: "", 
+//       }),
+//     ],
+//   });
 
-  // Create the table rows with proper formatting
-  const rows = data.map(item => {
-    return [
-      new Paragraph(item["Bank Name"]),
-      new Paragraph(item["Name"]),
-      new Paragraph(item["Policy Number"]),
-      new Paragraph(item["Vehicle Number"]),
-      new Paragraph(`${item.Percentage}%`),
-    ];
-  });
+//   // Create the table rows with proper formatting
+//   const rows = data.map(item => {
+//     return [
+//       new Paragraph(item["Bank Name"]),
+//       new Paragraph(item["Name"]),
+//       new Paragraph(item["Policy Number"]),
+//       new Paragraph(item["Vehicle Number"]),
+//       new Paragraph(`${item.percentage}%`),
+//     ];
+//   });
 
-  // Add the table to the document
-  doc.addSection({
-    properties: {},
-    children: [
-      {
-        type: "table",
-        rows: rows.map(row => ({
-          children: row.map(cell => ({
-            children: [cell],
-          })),
-        })),
-      },
-    ],
-  });
+//   // Add the table to the document
+//   doc.addSection({
+//     properties: {},
+//     children: [
+//       {
+//         type: "table",
+//         rows: rows.map(row => ({
+//           children: row.map(cell => ({
+//             children: [cell],
+//           })),
+//         })),
+//       },
+//     ],
+//   });
 
-  // Export the document
-  Packer.toBlob(doc).then(blob => {
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "data.docx"; // Set the file name for download
-    document.body.appendChild(link); // Append link to body
-    link.click(); // Programmatically click the link to trigger download
-    document.body.removeChild(link); // Remove the link from the document
-  }).catch(err => {
-    console.error("Error exporting to DOCX:", err); // Log any errors
-  });
-};
+//   // Export the document
+//   Packer.toBlob(doc).then(blob => {
+//     const url = URL.createObjectURL(blob);
+//     const link = document.createElement("a");
+//     link.href = url;
+//     link.download = "data.docx"; // Set the file name for download
+//     document.body.appendChild(link); // Append link to body
+//     link.click(); // Programmatically click the link to trigger download
+//     document.body.removeChild(link); // Remove the link from the document
+//   }).catch(err => {
+//     console.error("Error exporting to DOCX:", err); // Log any errors
+//   });
+// };
 
 
 
@@ -284,7 +285,7 @@ const exportToDOC = (data) => {
             >
               <MenuItem onClick={() => exportToExcel(filteredData(insuranceData.concat(brokerData)))}>Export to Excel</MenuItem>
               <MenuItem onClick={() => exportToPDF(filteredData(insuranceData.concat(brokerData)))}>Export to PDF</MenuItem>
-              <MenuItem onClick={() => exportToDOC(filteredData(insuranceData.concat(brokerData)))}>Export to DOC</MenuItem>
+              {/* <MenuItem onClick={() => exportToDOC(filteredData(insuranceData.concat(brokerData)))}>Export to DOC</MenuItem> */}
             </Menu>
           </div>
 
@@ -310,7 +311,7 @@ const exportToDOC = (data) => {
               sx={{ lineHeight: "1.2", borderRadius: "8px" }}
             >
               <MenuItem value="">
-                <span className="text-grey-400">All Banks</span>
+                <span className="text-gray-400">All Banks</span>
               </MenuItem>
               {bankNames.map((bank, index) => (
                 <MenuItem key={index} value={bank}>
