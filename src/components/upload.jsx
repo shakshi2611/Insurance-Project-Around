@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useNavigate } from "react-router-dom";
 import { Button, Grid, Typography, Card, CardContent } from '@mui/material';
@@ -6,8 +6,11 @@ import { PDFDocument } from 'pdf-lib';
 import * as XLSX from 'xlsx';
 import mammoth from 'mammoth';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
-const UploadSection = () => {
+
+
+const UploadSection = ({ setIsComparisonViewed }) => {
   const navigate = useNavigate();
   const [insuranceFiles, setInsuranceFiles] = useState([]);
   const [brokerFile, setBrokerFile] = useState(null);
@@ -61,6 +64,7 @@ const UploadSection = () => {
     return text;
   };
 
+  
   const sendFileDataToServer = async (fileName, fileData, endpoint) => {
     try {
       const response = await axios.post(`http://localhost:5001/${endpoint}`, {
@@ -87,6 +91,11 @@ const UploadSection = () => {
   });
 
   const isButtonDisabled = insuranceFiles.length === 0 || !brokerFile;
+
+  const handleViewComparison = () => {
+    setIsComparisonViewed(true);
+    navigate('/overview');
+  };
 
   return (
     <div style={{ padding: '20px' }}>
@@ -185,10 +194,11 @@ const UploadSection = () => {
             variant="contained"
             color="primary"
             style={{ padding: '10px 20px', fontSize: '16px', borderRadius: '8px' }}
-            onClick={() => {
-              // console.log('Navigating to comparison page');
-              navigate('/overview');
-            }}
+            // onClick={() => {
+            //   // console.log('Navigating to comparison page');
+            //   navigate('/overview');
+            // }}
+            onClick={handleViewComparison}
             disabled={isButtonDisabled}
           >
             View Comparison
@@ -197,6 +207,10 @@ const UploadSection = () => {
       </Grid>
     </div>
   );
+};
+
+UploadSection.propTypes = {
+  setIsComparisonViewed: PropTypes.func.isRequired,
 };
 
 export default UploadSection;

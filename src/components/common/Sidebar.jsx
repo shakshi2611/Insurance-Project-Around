@@ -20,7 +20,7 @@ const SIDEBAR_ITEMS = [
 	// { name: "Authentication", icon: TrendingUp, color: "#3B82F6", href: "/Signup" },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({onLogout, isComparisonViewed}) => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
 	return (
@@ -42,7 +42,7 @@ const Sidebar = () => {
 
 				<nav className='mt-8 flex-grow'>
 					{SIDEBAR_ITEMS.map((item) => (
-						<Link key={item.href} to={item.href}>
+						<Link key={item.href} to={item.href} className={`sidebar-link ${item.name === "Overview" && !isComparisonViewed ? 'disabled' : ''}`}>
 							<motion.div className='flex items-center p-4 text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors mb-2'>
 								<item.icon size={20} style={{ color: item.color, minWidth: "20px" }} />
 								<AnimatePresence>
@@ -62,6 +62,7 @@ const Sidebar = () => {
 						</Link>
 					))}
 				</nav>
+				<button className='bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2  rounded transition duration-200  sm:w-auto' onClick={onLogout}>Logout</button>
 			</div>
 		</motion.div>
 	);

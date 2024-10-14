@@ -18,7 +18,7 @@ export const signupUser = async (userData) => {
     return newUser;
   };
   
-  // Function to log in an existing user
+
   export const loginUser = async (email, password) => {
     const response = await fetch("http://localhost:5000/users");
     
@@ -33,6 +33,6 @@ export const signupUser = async (userData) => {
       throw new Error("Invalid credentials");
     }
   
-    return user; // Return the authenticated user
+    return user; 
   };
   
