@@ -5,8 +5,8 @@ import axios from "axios"; // Import Axios
 import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
 import { jsPDF } from "jspdf";
-import "jspdf-autotable"; 
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import "jspdf-autotable";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import {
   Table,
   TableBody,
@@ -23,7 +23,7 @@ import {
   IconButton,
   Menu,
 } from "@mui/material";
-import * as XLSX from "xlsx"; 
+import * as XLSX from "xlsx";
 
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
@@ -31,20 +31,28 @@ const OverviewPage = () => {
   const [brokerData, setBrokerData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedBank, setSelectedBank] = useState(""); 
+  const [selectedBank, setSelectedBank] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
-  
+
   const CONSTANT_AMOUNT = 1200; // Define your constant amount
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const insuranceResponse = await axios.get("http://localhost:5001/insuranceFiles");
-        const brokerResponse = await axios.get("http://localhost:5001/brokerFiles");
+        const insuranceResponse = await axios.get(
+          "http://localhost:5001/insuranceFiles"
+        );
+        const brokerResponse = await axios.get(
+          "http://localhost:5001/brokerFiles"
+        );
 
-        const flattenedInsuranceData = insuranceResponse.data.flatMap((file) => file.content);
-        const flattenedBrokerData = brokerResponse.data.flatMap((file) => file.content);
+        const flattenedInsuranceData = insuranceResponse.data.flatMap(
+          (file) => file.content
+        );
+        const flattenedBrokerData = brokerResponse.data.flatMap(
+          (file) => file.content
+        );
 
         setInsuranceData(flattenedInsuranceData);
         setBrokerData(flattenedBrokerData);
@@ -60,28 +68,50 @@ const OverviewPage = () => {
 
   // Match, Positive, and Negative Data filtering logic
   const matchData = insuranceData.filter((insurance) =>
-    brokerData.some((broker) => broker["Policy Number"] === insurance["Policy Number"])
+    brokerData.some(
+      (broker) => broker["Policy Number"] === insurance["Policy Number"]
+    )
   );
 
-  const positiveData = insuranceData.filter((insurance) => {
-    return insurance.Amount < CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
-  });
+  // const positiveData = insuranceData
+  // .filter((insurance) => {
+  //   return insurance.Amount < CONSTANT_AMOUNT;
+  // });
 
-  const negativeData = insuranceData.filter((insurance) => {
-    return insurance.Amount > CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
-  });
+  // const negativeData = insuranceData.filter((insurance) => {
+  //   return insurance.Amount > CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
+  // });
+
+  const positiveData = insuranceData
+    .filter((insurance) => insurance.Amount > CONSTANT_AMOUNT)
+    .map((insurance) => ({
+      ...insurance,
+      Difference:  insurance.Amount - CONSTANT_AMOUNT , // Add the difference field
+    }));
+
+  // Negative Data (actual amount is more than CONSTANT_AMOUNT, show actual amount - CONSTANT_AMOUNT)
+  const negativeData = insuranceData
+    .filter((insurance) => insurance.Amount < CONSTANT_AMOUNT)
+    .map((insurance) => ({
+      ...insurance,
+      Difference: insurance.Amount - CONSTANT_AMOUNT, // Add the difference field
+    }));
 
   // Get unique bank names
   const bankNames = [
-    ...new Set([...insuranceData, ...brokerData].map((item) => item["Bank Name"])),
+    ...new Set(
+      [...insuranceData, ...brokerData].map((item) => item["Bank Name"])
+    ),
   ];
 
   // Filter data based on the selected bank
   const filteredData = (data) =>
-    selectedBank ? data.filter((item) => item["Bank Name"] === selectedBank) : data;
+    selectedBank
+      ? data.filter((item) => item["Bank Name"] === selectedBank)
+      : data;
 
   // Function to render table with filtered data
-  const renderTable = (data, title) => (
+  const renderTable = (data, title, showDifference = false) => (
     <div style={{ marginTop: "30px" }}>
       <Typography variant="h6" gutterBottom>
         {title}
@@ -101,6 +131,9 @@ const OverviewPage = () => {
               <TableCell sx={{ color: "#6366f1" }}>Policy Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Vehicle Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Amount</TableCell>
+              {showDifference && (
+                <TableCell sx={{ color: "#6366f1" }}>Difference</TableCell>
+              )}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -109,14 +142,24 @@ const OverviewPage = () => {
                 <TableRow key={index}>
                   <TableCell sx={{ color: "" }}>{item["Bank Name"]}</TableCell>
                   <TableCell sx={{ color: "" }}>{item["Name"]}</TableCell>
-                  <TableCell sx={{ color: "" }}>{item["Policy Number"]}</TableCell>
-                  <TableCell sx={{ color: "" }}>{item["Vehicle Number"]}</TableCell>
-                  <TableCell sx={{ color: "" }}>{item.Amount}</TableCell> {/* Display the original amount */}
+                  <TableCell sx={{ color: "" }}>
+                    {item["Policy Number"]}
+                  </TableCell>
+                  <TableCell sx={{ color: "" }}>
+                    {item["Vehicle Number"]}
+                  </TableCell>
+                  <TableCell sx={{ color: "" }}>{item.Amount}</TableCell>{" "}
+                  {showDifference && (
+                    <TableCell sx={{ color: "" }}>{item.Difference}</TableCell>
+                  )}
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={5} style={{ color: "#9ca3af", textAlign: "center" }}>
+                <TableCell
+                  colSpan={5}
+                  style={{ color: "#9ca3af", textAlign: "center" }}
+                >
                   No Data Available
                 </TableCell>
               </TableRow>
@@ -138,13 +181,19 @@ const OverviewPage = () => {
   // Updated PDF export function
   const exportToPDF = (data) => {
     const doc = new jsPDF();
-    const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "Amount"];
-    const tableRows = data.map(item => [
+    const tableColumn = [
+      "Bank Name",
+      "Name",
+      "Policy Number",
+      "Vehicle Number",
+      "Amount",
+    ];
+    const tableRows = data.map((item) => [
       item["Bank Name"],
       item["Name"],
       item["Policy Number"],
       item["Vehicle Number"],
-      `${item.Amount}`
+      `${item.Amount}`,
     ]);
 
     doc.autoTable({
@@ -166,8 +215,8 @@ const OverviewPage = () => {
         <FormControl
           style={{
             display: "flex",
-            flexDirection: "row", 
-            justifyContent: "space-between", 
+            flexDirection: "row",
+            justifyContent: "space-between",
             alignItems: "center",
             marginBottom: "20px",
             width: "100%",
@@ -181,7 +230,7 @@ const OverviewPage = () => {
               aria-haspopup="true"
               onClick={(event) => setAnchorEl(event.currentTarget)}
             >
-              <FileDownloadIcon style={{ color: 'white' }} />
+              <FileDownloadIcon style={{ color: "white" }} />
             </IconButton>
 
             <Menu
@@ -190,10 +239,18 @@ const OverviewPage = () => {
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              <MenuItem onClick={() => exportToExcel(filteredData(insuranceData.concat(brokerData)))}>
+              <MenuItem
+                onClick={() =>
+                  exportToExcel(filteredData(insuranceData.concat(brokerData)))
+                }
+              >
                 Export to Excel
               </MenuItem>
-              <MenuItem onClick={() => exportToPDF(filteredData(insuranceData.concat(brokerData)))}>
+              <MenuItem
+                onClick={() =>
+                  exportToPDF(filteredData(insuranceData.concat(brokerData)))
+                }
+              >
                 Export to PDF
               </MenuItem>
             </Menu>
@@ -241,7 +298,7 @@ const OverviewPage = () => {
           <StatCard
             name="All Data"
             icon={Zap}
-            value="$12,345"
+            value={filteredData(insuranceData.concat(brokerData)).length}
             color="#6366F1"
             onViewClick={() => setActiveTable("allData")}
           />
@@ -253,14 +310,14 @@ const OverviewPage = () => {
             onViewClick={() => setActiveTable("matchData")}
           />
           <StatCard
-            name="Positive Data"
+            name="+ Count Data"
             icon={BarChart2}
             value={filteredData(positiveData).length}
             color="#FBBF24"
             onViewClick={() => setActiveTable("positiveData")}
           />
           <StatCard
-            name="Negative Data"
+            name="- Count Data"
             icon={ShoppingBag}
             value={filteredData(negativeData).length}
             color="#EF4444"
@@ -269,9 +326,28 @@ const OverviewPage = () => {
         </motion.div>
 
         {/* Render Tables */}
-        {activeTable === "matchData" && renderTable(filteredData(matchData), "Matched Data")}
-        {activeTable === "positiveData" && renderTable(filteredData(positiveData), "Positive Data (Amount < 1200)")}
-        {activeTable === "negativeData" && renderTable(filteredData(negativeData), "Negative Data (Amount > 1200)")}
+        {activeTable === "allData" &&
+          renderTable(
+            filteredData(insuranceData.concat(brokerData)),
+            "All Data"
+          )}
+
+        {activeTable === "matchData" &&
+          renderTable(filteredData(matchData), "Matched Data")}
+
+        {activeTable === "positiveData" &&
+          renderTable(
+            filteredData(positiveData),
+            "Positive Data ",
+            true
+          )}
+
+        {activeTable === "negativeData" &&
+          renderTable(
+            filteredData(negativeData),
+            "Negative Data ",
+            true
+          )}
       </main>
     </div>
   );
