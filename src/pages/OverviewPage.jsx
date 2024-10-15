@@ -121,7 +121,7 @@ const OverviewPage = () => {
               <TableCell sx={{ color: "#6366F1" }}>Name</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Policy Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Vehicle Number</TableCell>
-              <TableCell sx={{ color: "#6366f1" }}>amount</TableCell>
+              <TableCell sx={{ color: "#6366f1" }}>Amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -141,7 +141,7 @@ const OverviewPage = () => {
                     {item["Vehicle Number"]}
                   </TableCell>
                   <TableCell sx={{ color: "" }}>
-                    {item.amount}
+                    {item.Amount}
                   </TableCell>
                 </TableRow>
               ))
@@ -188,63 +188,6 @@ const exportToPDF = (data) => {
   });
   doc.save("data.pdf");
 };
-
-// const exportToDOC = (data) => {
-//   const doc = new Document();
-
-//   doc.addSection({
-//     properties: {},
-//     children: [
-//       new Paragraph({
-//         text: "Exported Data",
-//         heading: "Heading1",
-//       }),
-//       new Paragraph({
-//         text: "", 
-//       }),
-//     ],
-//   });
-
-//   // Create the table rows with proper formatting
-//   const rows = data.map(item => {
-//     return [
-//       new Paragraph(item["Bank Name"]),
-//       new Paragraph(item["Name"]),
-//       new Paragraph(item["Policy Number"]),
-//       new Paragraph(item["Vehicle Number"]),
-//       new Paragraph(`${item.amount}%`),
-//     ];
-//   });
-
-//   // Add the table to the document
-//   doc.addSection({
-//     properties: {},
-//     children: [
-//       {
-//         type: "table",
-//         rows: rows.map(row => ({
-//           children: row.map(cell => ({
-//             children: [cell],
-//           })),
-//         })),
-//       },
-//     ],
-//   });
-
-//   // Export the document
-//   Packer.toBlob(doc).then(blob => {
-//     const url = URL.createObjectURL(blob);
-//     const link = document.createElement("a");
-//     link.href = url;
-//     link.download = "data.docx"; // Set the file name for download
-//     document.body.appendChild(link); // Append link to body
-//     link.click(); // Programmatically click the link to trigger download
-//     document.body.removeChild(link); // Remove the link from the document
-//   }).catch(err => {
-//     console.error("Error exporting to DOCX:", err); // Log any errors
-//   });
-// };
-
 
 
 
