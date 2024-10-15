@@ -1,4 +1,4 @@
-import { BarChart2, DollarSign, Menu, Settings } from "lucide-react";
+import { BarChart2, DollarSign, Menu, Settings, LogOut } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -16,12 +16,12 @@ const SIDEBAR_ITEMS = [
     color: "#3B82F6",
     href: "/overview",
   },
-  {
-    name: "Settings",
-    icon: Settings,
-    color: "#6EE7B7",
-    href: "/settings",
-  },
+//   {
+//     name: "Settings",
+//     icon: Settings,
+//     color: "#6EE7B7",
+//     href: "/settings",
+//   },
 ];
 
 const Sidebar = ({ onLogout }) => {
@@ -81,11 +81,16 @@ const Sidebar = ({ onLogout }) => {
             </Link>
           ))}
         </nav>
-        <button
-          className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2  rounded transition duration-200  sm:w-auto"
+		<button
+          className="flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded transition duration-200 sm:w-auto"
           onClick={onLogout}
         >
-          Logout
+          <LogOut size={20} style={{ color: "white", minWidth: "20px" }} /> {/* Logout Icon */}
+          {isSidebarOpen && (
+            <span className="ml-2">
+              Logout
+            </span>
+          )}
         </button>
       </div>
     </motion.div>

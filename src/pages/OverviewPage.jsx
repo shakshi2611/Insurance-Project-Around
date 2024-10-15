@@ -6,7 +6,6 @@ import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable"; 
-import { Document, Packer, Paragraph } from "docx";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import {
   Table,
@@ -26,7 +25,6 @@ import {
 } from "@mui/material";
 import * as XLSX from "xlsx"; 
 
-
 const OverviewPage = () => {
   const [activeTable, setActiveTable] = useState(null);
   const [insuranceData, setInsuranceData] = useState([]);
@@ -36,24 +34,17 @@ const OverviewPage = () => {
   const [selectedBank, setSelectedBank] = useState(""); 
   const [anchorEl, setAnchorEl] = useState(null);
   
+  const CONSTANT_AMOUNT = 1200; // Define your constant amount
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const insuranceResponse = await axios.get(
-          "http://localhost:5001/insuranceFiles"
-        );
-        const brokerResponse = await axios.get(
-          "http://localhost:5001/brokerFiles"
-        );
+        const insuranceResponse = await axios.get("http://localhost:5001/insuranceFiles");
+        const brokerResponse = await axios.get("http://localhost:5001/brokerFiles");
 
-        const flattenedInsuranceData = insuranceResponse.data.flatMap(
-          (file) => file.content
-        );
-        const flattenedBrokerData = brokerResponse.data.flatMap(
-          (file) => file.content
-        );
+        const flattenedInsuranceData = insuranceResponse.data.flatMap((file) => file.content);
+        const flattenedBrokerData = brokerResponse.data.flatMap((file) => file.content);
 
         setInsuranceData(flattenedInsuranceData);
         setBrokerData(flattenedBrokerData);
@@ -69,37 +60,25 @@ const OverviewPage = () => {
 
   // Match, Positive, and Negative Data filtering logic
   const matchData = insuranceData.filter((insurance) =>
-    brokerData.some(
-      (broker) => broker["Policy Number"] === insurance["Policy Number"]
-    )
+    brokerData.some((broker) => broker["Policy Number"] === insurance["Policy Number"])
   );
 
   const positiveData = insuranceData.filter((insurance) => {
-    const broker = brokerData.find(
-      (broker) => broker["Policy Number"] === insurance["Policy Number"]
-    );
-    return broker && insurance.amount < broker.amount;
+    return insurance.Amount < CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
   });
 
   const negativeData = insuranceData.filter((insurance) => {
-    const broker = brokerData.find(
-      (broker) => broker["Policy Number"] === insurance["Policy Number"]
-    );
-    return broker && insurance.amount > broker.amount;
+    return insurance.Amount > CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
   });
 
   // Get unique bank names
   const bankNames = [
-    ...new Set(
-      [...insuranceData, ...brokerData].map((item) => item["Bank Name"])
-    ),
+    ...new Set([...insuranceData, ...brokerData].map((item) => item["Bank Name"])),
   ];
 
   // Filter data based on the selected bank
   const filteredData = (data) =>
-    selectedBank
-      ? data.filter((item) => item["Bank Name"] === selectedBank)
-      : data;
+    selectedBank ? data.filter((item) => item["Bank Name"] === selectedBank) : data;
 
   // Function to render table with filtered data
   const renderTable = (data, title) => (
@@ -128,29 +107,16 @@ const OverviewPage = () => {
             {data.length > 0 ? (
               data.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell sx={{ color: "" }}>
-                    {item["Bank Name"]}
-                  </TableCell>
-                  <TableCell sx={{ color: "" }}>
-                    {item["Name"]}
-                  </TableCell>
-                  <TableCell sx={{ color: "" }}>
-                    {item["Policy Number"]}
-                  </TableCell>
-                  <TableCell sx={{ color: "" }}>
-                    {item["Vehicle Number"]}
-                  </TableCell>
-                  <TableCell sx={{ color: "" }}>
-                    {item.Amount}
-                  </TableCell>
+                  <TableCell sx={{ color: "" }}>{item["Bank Name"]}</TableCell>
+                  <TableCell sx={{ color: "" }}>{item["Name"]}</TableCell>
+                  <TableCell sx={{ color: "" }}>{item["Policy Number"]}</TableCell>
+                  <TableCell sx={{ color: "" }}>{item["Vehicle Number"]}</TableCell>
+                  <TableCell sx={{ color: "" }}>{item.Amount}</TableCell> {/* Display the original amount */}
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell
-                  colSpan={4}
-                  style={{ color: "#9ca3af", textAlign: "center" }}
-                >
+                <TableCell colSpan={5} style={{ color: "#9ca3af", textAlign: "center" }}>
                   No Data Available
                 </TableCell>
               </TableRow>
@@ -169,27 +135,25 @@ const OverviewPage = () => {
     XLSX.writeFile(workbook, "data.xlsx");
   };
 
- // Updated PDF export function
-const exportToPDF = (data) => {
-  const doc = new jsPDF();
-  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "amount"];
-  const tableRows = data.map(item => [
-    item["Bank Name"],
-    item["Name"],
-    item["Policy Number"],
-    item["Vehicle Number"],
-    `${item.amount}`
-  ]);
+  // Updated PDF export function
+  const exportToPDF = (data) => {
+    const doc = new jsPDF();
+    const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "Amount"];
+    const tableRows = data.map(item => [
+      item["Bank Name"],
+      item["Name"],
+      item["Policy Number"],
+      item["Vehicle Number"],
+      `${item.Amount}`
+    ]);
 
-  doc.autoTable({
-    head: [tableColumn],
-    body: tableRows,
-    startY: 30,
-  });
-  doc.save("data.pdf");
-};
-
-
+    doc.autoTable({
+      head: [tableColumn],
+      body: tableRows,
+      startY: 30,
+    });
+    doc.save("data.pdf");
+  };
 
   if (loading) return <Typography>Loading...</Typography>;
   if (error) return <Typography>Error: {error}</Typography>;
@@ -217,7 +181,7 @@ const exportToPDF = (data) => {
               aria-haspopup="true"
               onClick={(event) => setAnchorEl(event.currentTarget)}
             >
-            <FileDownloadIcon style={{ color: 'white' }} />
+              <FileDownloadIcon style={{ color: 'white' }} />
             </IconButton>
 
             <Menu
@@ -226,9 +190,12 @@ const exportToPDF = (data) => {
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              <MenuItem onClick={() => exportToExcel(filteredData(insuranceData.concat(brokerData)))}>Export to Excel</MenuItem>
-              <MenuItem onClick={() => exportToPDF(filteredData(insuranceData.concat(brokerData)))}>Export to PDF</MenuItem>
-              {/* <MenuItem onClick={() => exportToDOC(filteredData(insuranceData.concat(brokerData)))}>Export to DOC</MenuItem> */}
+              <MenuItem onClick={() => exportToExcel(filteredData(insuranceData.concat(brokerData)))}>
+                Export to Excel
+              </MenuItem>
+              <MenuItem onClick={() => exportToPDF(filteredData(insuranceData.concat(brokerData)))}>
+                Export to PDF
+              </MenuItem>
             </Menu>
           </div>
 
@@ -282,36 +249,29 @@ const exportToPDF = (data) => {
             name="Match Data"
             icon={Users}
             value={filteredData(matchData).length}
-            color="#8B5CF6"
+            color="#34D399"
             onViewClick={() => setActiveTable("matchData")}
           />
           <StatCard
-            name="+ Count Data"
-            icon={ShoppingBag}
+            name="Positive Data"
+            icon={BarChart2}
             value={filteredData(positiveData).length}
-            color="#EC4899"
+            color="#FBBF24"
             onViewClick={() => setActiveTable("positiveData")}
           />
           <StatCard
-            name="- Count Data"
-            icon={BarChart2}
+            name="Negative Data"
+            icon={ShoppingBag}
             value={filteredData(negativeData).length}
-            color="#10B981"
+            color="#EF4444"
             onViewClick={() => setActiveTable("negativeData")}
           />
         </motion.div>
 
-        {activeTable === "allData" &&
-          renderTable(
-            filteredData(insuranceData.concat(brokerData)),
-            "All Data"
-          )}
-        {activeTable === "matchData" &&
-          renderTable(filteredData(matchData), "Match Data")}
-        {activeTable === "positiveData" &&
-          renderTable(filteredData(positiveData), "+ Count Data")}
-        {activeTable === "negativeData" &&
-          renderTable(filteredData(negativeData), "- Count Data")}
+        {/* Render Tables */}
+        {activeTable === "matchData" && renderTable(filteredData(matchData), "Matched Data")}
+        {activeTable === "positiveData" && renderTable(filteredData(positiveData), "Positive Data (Amount < 1200)")}
+        {activeTable === "negativeData" && renderTable(filteredData(negativeData), "Negative Data (Amount > 1200)")}
       </main>
     </div>
   );
