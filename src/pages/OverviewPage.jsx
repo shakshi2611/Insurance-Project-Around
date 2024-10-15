@@ -78,14 +78,14 @@ const OverviewPage = () => {
     const broker = brokerData.find(
       (broker) => broker["Policy Number"] === insurance["Policy Number"]
     );
-    return broker && insurance.percentage < broker.percentage;
+    return broker && insurance.amount < broker.amount;
   });
 
   const negativeData = insuranceData.filter((insurance) => {
     const broker = brokerData.find(
       (broker) => broker["Policy Number"] === insurance["Policy Number"]
     );
-    return broker && insurance.percentage > broker.percentage;
+    return broker && insurance.amount > broker.amount;
   });
 
   // Get unique bank names
@@ -121,7 +121,7 @@ const OverviewPage = () => {
               <TableCell sx={{ color: "#6366F1" }}>Name</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Policy Number</TableCell>
               <TableCell sx={{ color: "#6366f1" }}>Vehicle Number</TableCell>
-              <TableCell sx={{ color: "#6366f1" }}>percentage</TableCell>
+              <TableCell sx={{ color: "#6366f1" }}>amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -141,7 +141,7 @@ const OverviewPage = () => {
                     {item["Vehicle Number"]}
                   </TableCell>
                   <TableCell sx={{ color: "" }}>
-                    {item.percentage}
+                    {item.amount}
                   </TableCell>
                 </TableRow>
               ))
@@ -172,13 +172,13 @@ const OverviewPage = () => {
  // Updated PDF export function
 const exportToPDF = (data) => {
   const doc = new jsPDF();
-  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "percentage"];
+  const tableColumn = ["Bank Name", "Name", "Policy Number", "Vehicle Number", "amount"];
   const tableRows = data.map(item => [
     item["Bank Name"],
     item["Name"],
     item["Policy Number"],
     item["Vehicle Number"],
-    `${item.percentage}`
+    `${item.amount}`
   ]);
 
   doc.autoTable({
@@ -212,7 +212,7 @@ const exportToPDF = (data) => {
 //       new Paragraph(item["Name"]),
 //       new Paragraph(item["Policy Number"]),
 //       new Paragraph(item["Vehicle Number"]),
-//       new Paragraph(`${item.percentage}%`),
+//       new Paragraph(`${item.amount}%`),
 //     ];
 //   });
 

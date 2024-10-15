@@ -14,7 +14,7 @@ import AnalyticsPage from "./pages/AnalyticsPage";
 import SettingsPage from "./pages/SettingsPage";
 
 function App() {
-  const location = useLocation();
+  const location = useLocation(); 
   const [isComparisonViewed, setIsComparisonViewed] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem("isAuthenticated") === "true";
@@ -27,69 +27,50 @@ function App() {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("isAuthenticated"); 
   };
 
-  // Determine if sidebar should be shown based on authentication and route
-  const showSidebar =
-    isAuthenticated && !["/login", "/signup"].includes(location.pathname);
+  const showSidebar = isAuthenticated && !['/login', '/signup'].includes(location.pathname);
 
   return (
     <div className="flex h-screen bg-gray-900 text-gray-100 overflow-hidden">
-      {/* Background overlay and blur */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-400 to-gray-900 opacity-80" />
         <div className="absolute inset-0 backdrop-blur-sm" />
       </div>
 
-      {/* Sidebar - only shown when authenticated */}
-      {showSidebar && (
-        <Sidebar
-          onLogout={handleLogout}
-          isComparisonViewed={isComparisonViewed}
-        />
-      )}
+      {showSidebar && <Sidebar onLogout={handleLogout}/>}
 
-      {/* Toast Notifications */}
       <ToastContainer />
-
-      {/* Application Routes */}
       <Routes>
+        {/* <Route
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/overview" />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        /> */}
+
         {/* Redirect root path to login page */}
         <Route path="/" element={<Navigate to="/login" />} />
-
-        {/* Public routes */}
         <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
         <Route path="/signup" element={<SignupPage />} />
 
-        {/* Protected routes - only accessible if authenticated */}
         {isAuthenticated && (
           <>
-            <Route
-              path="/overview"
-              element={
-                isComparisonViewed ? (
-                  <OverviewPage />
-                ) : (
-                  <Navigate to="/upload" />
-                )
-              }
-            />
+            <Route path="/overview" element={<OverviewPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/users" element={<UsersPage />} />
-            <Route
-              path="/upload"
-              element={
-                <UploadPage setIsComparisonViewed={setIsComparisonViewed} />
-              }
-            />
+            <Route path="/upload" element={<UploadPage />} />
             <Route path="/orders" element={<OrdersPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/settings" element={<SettingsPage />} />
           </>
         )}
 
-        {/* Catch-all redirect to appropriate route */}
         <Route
           path="*"
           element={<Navigate to={isAuthenticated ? "/upload" : "/login"} />}

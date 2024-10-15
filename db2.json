@@ -10,70 +10,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -87,70 +87,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -164,70 +164,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -241,70 +241,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -318,70 +318,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -395,70 +395,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -472,70 +472,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -549,70 +549,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -626,70 +626,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -703,70 +703,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
@@ -780,75 +780,537 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 60
+          "amount": 60
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 45
+          "amount": 45
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 90
+          "amount": 90
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 85
+          "amount": 85
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 40
+          "amount": 40
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 65
+          "amount": 65
         }
       ]
     },
     {
       "id": "8429",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "amount": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "amount": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "amount": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "amount": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "amount": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "amount": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "amount": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "amount": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "amount": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "amount": 65
+        }
+      ]
+    },
+    {
+      "id": "fb02",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 65
+        }
+      ]
+    },
+    {
+      "id": "8727",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 65
+        }
+      ]
+    },
+    {
+      "id": "7f34",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 65
+        }
+      ]
+    },
+    {
+      "id": "89dd",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 65
+        }
+      ]
+    },
+    {
+      "id": "f805",
+      "name": "insurance_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 60
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 45
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 90
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 85
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 40
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 65
+        }
+      ]
+    },
+    {
+      "id": "737f",
       "name": "insurance_data_demo.xlsx",
       "type": "excel",
       "content": [
@@ -936,70 +1398,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1013,70 +1475,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1090,70 +1552,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1167,70 +1629,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1244,70 +1706,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1321,70 +1783,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1398,70 +1860,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1475,70 +1937,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1552,70 +2014,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1629,70 +2091,70 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
@@ -1706,75 +2168,537 @@
           "Name": "John Doe",
           "Vehicle Number": "ABC123",
           "Policy Number": "POL123",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank B",
           "Name": "Jane Doe",
           "Vehicle Number": "DEF456",
           "Policy Number": "POL456",
-          "percentage": 55
+          "amount": 55
         },
         {
           "Bank Name": "Bank C",
           "Name": "Bob Smith",
           "Vehicle Number": "GHI789",
           "Policy Number": "POL789",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank D",
           "Name": "Alice Jones",
           "Vehicle Number": "JKL012",
           "Policy Number": "POL012",
-          "percentage": 75
+          "amount": 75
         },
         {
           "Bank Name": "Bank E",
           "Name": "Charlie Brown",
           "Vehicle Number": "MNO345",
           "Policy Number": "POL345",
-          "percentage": 95
+          "amount": 95
         },
         {
           "Bank Name": "Bank F",
           "Name": "David White",
           "Vehicle Number": "PQR678",
           "Policy Number": "POL678",
-          "percentage": 65
+          "amount": 65
         },
         {
           "Bank Name": "Bank G",
           "Name": "Eve Black",
           "Vehicle Number": "STU901",
           "Policy Number": "POL901",
-          "percentage": 80
+          "amount": 80
         },
         {
           "Bank Name": "Bank H",
           "Name": "Frank Green",
           "Vehicle Number": "VWX234",
           "Policy Number": "POL234",
-          "percentage": 50
+          "amount": 50
         },
         {
           "Bank Name": "Bank I",
           "Name": "Grace Blue",
           "Vehicle Number": "YZA567",
           "Policy Number": "POL567",
-          "percentage": 70
+          "amount": 70
         },
         {
           "Bank Name": "Bank J",
           "Name": "Hank Red",
           "Vehicle Number": "BCD890",
           "Policy Number": "POL890",
-          "percentage": 70
+          "amount": 70
         }
       ]
     },
     {
       "id": "153c",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "amount": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "amount": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "amount": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "amount": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "amount": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "amount": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "amount": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "amount": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "amount": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "amount": 70
+        }
+      ]
+    },
+    {
+      "id": "c5c0",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 70
+        }
+      ]
+    },
+    {
+      "id": "3edd",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 70
+        }
+      ]
+    },
+    {
+      "id": "7c31",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 70
+        }
+      ]
+    },
+    {
+      "id": "bba4",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 70
+        }
+      ]
+    },
+    {
+      "id": "a2b3",
+      "name": "broker_data_demo.xlsx",
+      "type": "excel",
+      "content": [
+        {
+          "Bank Name": "Bank A",
+          "Name": "John Doe",
+          "Vehicle Number": "ABC123",
+          "Policy Number": "POL123",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank B",
+          "Name": "Jane Doe",
+          "Vehicle Number": "DEF456",
+          "Policy Number": "POL456",
+          "Percentage": 55
+        },
+        {
+          "Bank Name": "Bank C",
+          "Name": "Bob Smith",
+          "Vehicle Number": "GHI789",
+          "Policy Number": "POL789",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank D",
+          "Name": "Alice Jones",
+          "Vehicle Number": "JKL012",
+          "Policy Number": "POL012",
+          "Percentage": 75
+        },
+        {
+          "Bank Name": "Bank E",
+          "Name": "Charlie Brown",
+          "Vehicle Number": "MNO345",
+          "Policy Number": "POL345",
+          "Percentage": 95
+        },
+        {
+          "Bank Name": "Bank F",
+          "Name": "David White",
+          "Vehicle Number": "PQR678",
+          "Policy Number": "POL678",
+          "Percentage": 65
+        },
+        {
+          "Bank Name": "Bank G",
+          "Name": "Eve Black",
+          "Vehicle Number": "STU901",
+          "Policy Number": "POL901",
+          "Percentage": 80
+        },
+        {
+          "Bank Name": "Bank H",
+          "Name": "Frank Green",
+          "Vehicle Number": "VWX234",
+          "Policy Number": "POL234",
+          "Percentage": 50
+        },
+        {
+          "Bank Name": "Bank I",
+          "Name": "Grace Blue",
+          "Vehicle Number": "YZA567",
+          "Policy Number": "POL567",
+          "Percentage": 70
+        },
+        {
+          "Bank Name": "Bank J",
+          "Name": "Hank Red",
+          "Vehicle Number": "BCD890",
+          "Policy Number": "POL890",
+          "Percentage": 70
+        }
+      ]
+    },
+    {
+      "id": "77dd",
       "name": "broker_data_demo.xlsx",
       "type": "excel",
       "content": [
