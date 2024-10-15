@@ -67,12 +67,18 @@ const OverviewPage = () => {
   }, []);
 
   // Match, Positive, and Negative Data filtering logic
-  const matchData = insuranceData.filter((insurance) =>
-    brokerData.some(
-      (broker) => broker["Policy Number"] === insurance["Policy Number"]
-    )
-  );
+  // const matchData = insuranceData.filter((insurance) =>
+  //   brokerData.some(
+  //     (broker) => broker["Policy Number"] === insurance["Policy Number"]
+  //   )
+  // );
 
+  const matchData = insuranceData
+    .filter((insurance) => insurance.Amount === CONSTANT_AMOUNT)
+    .map((insurance) => ({
+      ...insurance,
+      Difference:  insurance.Amount - CONSTANT_AMOUNT , 
+    }));
   // const positiveData = insuranceData
   // .filter((insurance) => {
   //   return insurance.Amount < CONSTANT_AMOUNT;
