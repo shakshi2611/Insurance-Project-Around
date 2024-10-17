@@ -89,9 +89,9 @@ const LoginPage = ({ onLogin }) => {
                                 margin="normal"
                                 required
                                 fullWidth
-                                label="Email Address"
                                 type="email"
                                 autoComplete="email"
+                                placeholder="Email address"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
@@ -99,7 +99,7 @@ const LoginPage = ({ onLogin }) => {
                                 margin="normal"
                                 required
                                 fullWidth
-                                label="Password"
+                                placeholder="Password"
                                 type="password"
                                 autoComplete="current-password"
                                 value={password}
