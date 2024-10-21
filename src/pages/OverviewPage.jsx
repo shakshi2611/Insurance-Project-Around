@@ -8,20 +8,7 @@ import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-  Typography,
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  IconButton,
-  Menu,
+  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Select, MenuItem, FormControl, InputLabel, IconButton, Menu,
 } from "@mui/material";
 import * as XLSX from "xlsx";
 
@@ -34,7 +21,7 @@ const OverviewPage = () => {
   const [selectedBank, setSelectedBank] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const CONSTANT_AMOUNT = 1200; // Define your constant amount
+  const CONSTANT_AMOUNT = 1200; 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,44 +53,33 @@ const OverviewPage = () => {
     fetchData();
   }, []);
 
-  // Match, Positive, and Negative Data filtering logic
-  // const matchData = insuranceData.filter((insurance) =>
-  //   brokerData.some(
-  //     (broker) => broker["Policy Number"] === insurance["Policy Number"]
-  //   )
-  // );
-
   const matchData = insuranceData
     .filter((insurance) => insurance.Amount === CONSTANT_AMOUNT)
     .map((insurance) => ({
       ...insurance,
       Difference:  insurance.Amount - CONSTANT_AMOUNT , 
+      Percentage: ((insurance.Amount - CONSTANT_AMOUNT) / CONSTANT_AMOUNT) * 100,
     }));
-  // const positiveData = insuranceData
-  // .filter((insurance) => {
-  //   return insurance.Amount < CONSTANT_AMOUNT;
-  // });
 
-  // const negativeData = insuranceData.filter((insurance) => {
-  //   return insurance.Amount > CONSTANT_AMOUNT; // Compare insurance amount to the constant amount
-  // });
 
   const positiveData = insuranceData
     .filter((insurance) => insurance.Amount > CONSTANT_AMOUNT)
     .map((insurance) => ({
       ...insurance,
-      Difference:  insurance.Amount - CONSTANT_AMOUNT , // Add the difference field
+      Difference:  insurance.Amount - CONSTANT_AMOUNT ,
+       Percentage: ((insurance.Amount - CONSTANT_AMOUNT) / CONSTANT_AMOUNT) * 100, 
     }));
 
-  // Negative Data (actual amount is more than CONSTANT_AMOUNT, show actual amount - CONSTANT_AMOUNT)
+  
   const negativeData = insuranceData
     .filter((insurance) => insurance.Amount < CONSTANT_AMOUNT)
     .map((insurance) => ({
       ...insurance,
-      Difference: insurance.Amount - CONSTANT_AMOUNT, // Add the difference field
+      Difference: insurance.Amount - CONSTANT_AMOUNT,
+      Percentage: ((insurance.Amount - CONSTANT_AMOUNT) / CONSTANT_AMOUNT) * 100, 
     }));
 
-  // Get unique bank names
+  
   const bankNames = [
     ...new Set(
       [...insuranceData, ...brokerData].map((item) => item["Bank Name"])
@@ -140,6 +116,7 @@ const OverviewPage = () => {
               {showDifference && (
                 <TableCell sx={{ color: "#6366f1" }}>Difference</TableCell>
               )}
+              <TableCell sx={{ color: "#6366f1" }}>Percentage</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -158,6 +135,7 @@ const OverviewPage = () => {
                   {showDifference && (
                     <TableCell sx={{ color: "" }}>{item.Difference}</TableCell>
                   )}
+                  <TableCell sx={{ color: "" }}>{item["Percentage"].toFixed(2)}%</TableCell>
                 </TableRow>
               ))
             ) : (
@@ -228,7 +206,7 @@ const OverviewPage = () => {
             width: "100%",
           }}
         >
-          {/* Button container */}
+
           <div className="container flex justify-end items-center mb-4 sm:mb-0 w-full sm:w-auto">
             <IconButton
               aria-label="more options"

@@ -28,8 +28,8 @@ const LoginPage = ({ onLogin }) => {
                     const user = resp[0];
                     if (user.password === password) {
                         toast.success('Login successful');
-                        onLogin(); // Call the onLogin function
-                        navigate('/sales'); // Navigate directly after successful login
+                        onLogin(); 
+                        navigate('/sales'); 
                     } else {
                         toast.error('Invalid credentials, please try again');
                     }
